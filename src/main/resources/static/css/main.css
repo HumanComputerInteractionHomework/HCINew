@@ -867,7 +867,7 @@ ul.service_box li.service_box-right p{
 .nav_item {
     font-size: 20px;
     display: block;
-    font-weight:500;
+    /*font-weight:500;*/
     color: #808080;
     border-top: 1px solid #fff;
     height: 50px;
@@ -884,7 +884,7 @@ ul.service_box li.service_box-right p{
 .nav_item_active {
     font-size: 20px;
     display: block;
-    font-weight:500;
+    /*font-weight:500;*/
     border-top: 1px solid #fff;
     height: 50px;
     line-height: 50px;
@@ -1042,7 +1042,6 @@ ul.service_box li.service_box-right p{
     color: #4682B4;
     font-size: 20px;
     font-family: "微软雅黑 Light";
-    text-align: center;
     display: inline-block;
 }
 
@@ -1050,36 +1049,36 @@ ul.service_box li.service_box-right p{
 .t1 {
     margin-left: 20px;
     width:300px;
-    text-align: center;
+    text-align: left;
 }
 
 .t2 {
-    width:200px;
+    width:230px;
     left: -100px;
-    text-align: center;
+    text-align: left;
 }
 .t3 {
     width:150px;
-    text-align: center;
+    text-align: left;
 }
 
 .t4 {
     width:150px;
-    text-align: center;
+    text-align: left;
 }
 .t5 {
     width:100px;
-    text-align: center;
+    text-align: left;
 }
 
 .t6 {
     width:70px;
-    text-align: center;
+    text-align: left;
 }
 .t7 {
     width:80px;
     margin-right: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .t11 {
