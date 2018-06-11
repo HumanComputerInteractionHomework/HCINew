@@ -909,13 +909,13 @@ ul.service_box li.service_box-right p{
 
 .content-item {
     border: none;
-    border-bottom: 1px solid #999;
+    /*border-bottom: 1px solid #999;*/
     padding: 10px;
     color: #808080
 }
 
 .content-item:hover {
-    border:  1px solid #3eb0f7;
+    /*border:  1px solid #3eb0f7;*/
 }
 
 .content-item-title {
