@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Digital_Host Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/user.js" type="text/javascript"></script>
+    <!-- Custom Theme files -->
+    <link href="css/main.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <!-- webfonts -->
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <!-- webfonts -->
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <!----font-Awesome----->
+</head>
+<body>
+
+    <!--<div class="header" style="padding-bottom:0 ">-->
+        <!--&lt;!&ndash; container &ndash;&gt;-->
+        <!--&lt;!&ndash; top-nav &ndash;&gt;-->
+        <!--<div class="container">-->
+            <!--<div class="logo">-->
+                <!--<a href="index.html"><img src="images/logo.png" alt=""/></a>-->
+            <!--</div>-->
+            <!--<div class="header_bottom_right">-->
+                <!--<div class="h_menu4">&lt;!&ndash; start h_menu4 &ndash;&gt;-->
+                    <!--<a class="toggleMenu" href="#">Menu</a>-->
+                    <!--<ul class="nav">-->
+                        <!--<li><a href="index.html">主页</a></li>-->
+                        <!--<li><a href="">数据中心</a></li>-->
+                        <!--<li><a><img src="./images/more.png" class="more"/> </a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                    <!--<script type="text/javascript" src="js/nav.js"></script>-->
+                <!--</div>-->
+                <!--<div class="clearfix"> </div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="fullscreen landing parallax" style="background-image:url('images/bg3.jpg'); " data-img-width="2000" data-img-height="1333" data-diff="100">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <!-- /.signup form -->
+                    <div class="col-md-5" style="margin-right: auto;margin-left: auto">
+
+                        <div class="signup-header wow fadeInUp" style="margin-top: 80px;margin-bottom: 100px;">
+                            <h3 class="form-title text-center">加入我们</h3>
+                            <form class="form-header" role="form" >
+                                <div class="form-group">
+                                    <input class="form-control input-lg" id="signup_phone" type="text" required oninvalid="setCustomValidity('请输入正确的手机号！');" onFocus=" if(this.value=='请输入手机号') this.value=''" onBlur="if(this.value=='') this.value='请输入手机号'" value="请输入手机号">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control input-lg" id="signup_email" type="text" required oninvalid="setCustomValidity('请输入正确的邮箱！');" onFocus=" if(this.value=='请输入邮箱') this.value=''" onBlur="if(this.value=='') this.value='请输入邮箱'" value="请输入邮箱">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control input-lg" id="signup_name" type="text" required oninvalid="setCustomValidity('请输入真实姓名！');" onFocus=" if(this.value=='请输入真实姓名') this.value=''" onBlur="if(this.value=='') this.value='请输入真实姓名'" value="请输入真实姓名">
+                                </div>
+                                <div class="form-group">
+                                    <label class="l-login login_password" id="pwd1" style="margin-top:378px;display: block;">请设置密码</label>
+                                    <input class="form-control input-lg" id="signup_pwd1" type="password" required oninvalid="setCustomValidity('请设置密码！');" onFocus="$('#pwd1').hide()" onBlur="if(this.value=='') $('#pwd1').show()" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="l-login login_password" id="pwd2" style="margin-top:450px; display: block;">请再次输入密码</label>
+                                    <input class="form-control input-lg" id="signup_pwd2" type="password" required oninvalid="setCustomValidity('请重复输入密码！');" onFocus="$('#pwd2').hide()" onBlur="if(this.value=='') $('#pwd2').show()" value="">
+                                </div>
+                                <div class="form-group last">
+                                    <input type="button" class="btn btn-warning btn-block btn-lg" value="注册" onclick="signUpClicked()">
+                                </div>
+                                <p class="text-center" style="color: black">已有账号，前去登录！<a href="page_signin.html">点击登录</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 footer-grid" >
+            <h3 >Feature and Services</h3>
+            <ul>
+                <li><a href="#">职位搜索</a></li>
+                <li><a href="#">智能推荐</a></li>
+                <li><a href="#">职业规划</a></li>
+                <li><a href="#">职位评价</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 footer-grid">
+            <h3>Customer Services</h3>
+            <ul>
+                <li><a href="#">我的收藏</a></li>
+                <li><a href="#">个人资料</a></li>
+                <li><a href="#">竞争力比拼</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 footer-grid">
+            <h3>Data Statistic</h3>
+            <ul>
+                <li><a href="#">职位影响因素</a></li>
+                <li><a href="#">职位分布统计</a></li>
+                <li><a href="#">企业画像</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 footer-grid">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li class="footer-address">
+                    <address>
+                        地址<br>
+                        南京大学, 鼓楼区<br>
+                        南京市, 江苏省 210089<br>
+                        <abbr title="Phone">P:</abbr> (5209) 12345678
+                    </address>
+                </li>
+                <li class="footer-address">
+                    <address>
+                        E-mail<br>
+                        151250022@nju.edu.cn
+                    </address>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <div class="copy">
+        <p>Copyright &copy; 2018.棉花糖 All rights reserved.   </p>
+    </div>
+    <!-- footer-grids -->
+</body>
+</html>

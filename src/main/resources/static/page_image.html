@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>企业画像</title>
+    <link rel="stylesheet" href="../css/main.css" type="text/css"/>
+    <!-- 引入 echarts.js -->
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/main.css" rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" type="text/css" href="css/zzsc.css">-->
+    <link rel="stylesheet" href="css/dcalendar.picker.css"/>
+    <!-- webfonts -->
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+</head>
+<body style="background: #f6f6f6">
+<div class="header" style="padding-bottom:0;">
+    <!-- container -->
+    <!-- top-nav -->
+    <div class="container">
+        <div class="logo">
+            <a href="home.html"><img src="images/logo.png" alt=""/></a>
+        </div>
+        <div class="header_bottom_right">
+            <div class="h_menu4"><!-- start h_menu4 -->
+                <a class="toggleMenu" href="#">Menu</a>
+                <ul class="nav">
+                    <li><a href="home.html">主页</a></li>
+                    <li><a href="page_search.html">职位搜索</a></li>
+                    <li><a href="page_matching.html">智能推荐</a></li>
+                    <li><a href=""class="hover">数据中心</a>
+                        <ul>
+                            <li><a href="page_stats.html">大数据职位分布</a></li>
+                            <li><a href="page_factor.html">薪酬影响因素</a></li>
+                            <li><a href="page_image.html">企业画像</a></li>
+                            <li><a href="page_image.html">技能图谱</a></li>
+                        </ul>
+                    </li>
+                    <li><a style="background: none"><img src="./images/more.png" class="more"/> </a>
+                        <ul style="color: #808080">
+                            <li><a href="page_collection.html"><span class="glyphicon glyphicon-heart"></span>  我的收藏</a></li>
+                            <li><a href="page_allInfo.html"><span class="glyphicon glyphicon-credit-card"></span>  我的信息</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-leaf"></span>  关于我们</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-log-out"></span>  退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <script type="text/javascript" src="js/nav.js"></script>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<div class="container ">
+    <div class="row search_title" style="margin-bottom: 30px">
+        <div class="col-md-6" style="float: left; margin-left: 20px">
+            <span  class="search_title_main" style="margin-right: 50px;color: #4682B4">企业类型-待遇分布</span>
+            <h3>全国企业统计数据如下，获得特定公司的企业画像和需求图谱，请在公司的详细信息中查找。</h3>
+        </div>
+        <div class="col-md-5" style="float: right;margin-top: 50px">
+            <button  id="pwd1" class="search-btn"><span class="glyphicon glyphicon-search" ></span></button>
+            <input type="text" class="search-input" id="search_input" onfocus="show_modal()">
+        </div>
+    </div>
+    <div style="padding-bottom: 20px">
+        <div id="main" style="width: 900px;height:600px;margin-left: auto;margin-right: auto"></div>
+    </div>
+    <div class="row search_title" style="margin-bottom: 30px">
+        <div class="col-md-6" style="float: left; margin-left: 20px">
+            <span  class="search_title_main" style="margin-right: 50px;color: #4682B4">职位-技能需求 分布</span>
+        </div>
+    </div>
+    <div style="padding-bottom: 20px">
+        <div id="main2" style="width: 900px;height:600px;margin-left: auto;margin-right: auto"></div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <!-- footer-grids -->
+        <div class="row">
+            <div class="col-md-3 footer-grid" >
+                <h3 >Feature and Services</h3>
+                <ul>
+                    <li><a href="#">职位搜索</a></li>
+                    <li><a href="#">智能推荐</a></li>
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职位评价</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">个人资料</a></li>
+                    <li><a href="#">竞争力比拼</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Data Statistic</h3>
+                <ul>
+                    <li><a href="#">职位影响因素</a></li>
+                    <li><a href="#">职位分布统计</a></li>
+                    <li><a href="#">企业画像</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li class="footer-address">
+                        <address>
+                            地址<br>
+                            南京大学, 鼓楼区<br>
+                            南京市, 江苏省 210089<br>
+                            <abbr title="Phone">P:</abbr> (5209) 12345678
+                        </address>
+                    </li>
+                    <li class="footer-address">
+                        <address>
+                            E-mail<br>
+                            151250022@nju.edu.cn
+                        </address>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="copy">
+            <p>Copyright &copy; 2018.棉花糖 All rights reserved.   </p>
+        </div>
+        <!-- footer-grids -->
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+
+
+<script type="text/javascript">
+    var dom = document.getElementById("main");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+
+    var yearCount = 7;
+    var categoryCount = 7;
+
+    var xAxisData = [];
+    var customData = [];
+    var legendData = [];
+    var dataList = [];
+
+    legendData.push('trend');
+    var encodeY = [];
+    legendData.push( '0-5k');
+    legendData.push( '6-10k');
+    legendData.push( '11-15k');
+    legendData.push( '16-20k');
+    legendData.push( '21-25k');
+    legendData.push( '26-30k');
+    legendData.push( '31-100k');
+    for (var i = 0; i < yearCount; i++) {
+        dataList.push([]);
+        encodeY.push(1 + i);
+    }
+    xAxisData.push('国企');
+    xAxisData.push('外商独资');
+    xAxisData.push('合资');
+    xAxisData.push('民营');
+    xAxisData.push('上市公司');
+    xAxisData.push('初创公司');
+    xAxisData.push('其他');
+    for (var i = 0; i < categoryCount; i++) {
+        var val = Math.random() * 1000;
+
+        var customVal = [i];
+        customData.push(customVal);
+
+        var data = dataList[0];
+        for (var j = 0; j < dataList.length; j++) {
+            var value = j === 0
+                ? echarts.number.round(val, 2)
+                : echarts.number.round(Math.max(0, dataList[j - 1][i] + (Math.random() - 0.5) * 200), 2);
+            dataList[j].push(value);
+            customVal.push(value);
+        }
+    }
+
+    function renderItem(params, api) {
+        var xValue = api.value(0);
+        var currentSeriesIndices = api.currentSeriesIndices();
+        var barLayout = api.barLayout({
+            barGap: '30%', barCategoryGap: '20%', count: currentSeriesIndices.length - 1
+        });
+
+        var points = [];
+        for (var i = 0; i < currentSeriesIndices.length; i++) {
+            var seriesIndex = currentSeriesIndices[i];
+            if (seriesIndex !== params.seriesIndex) {
+                var point = api.coord([xValue, api.value(seriesIndex)]);
+                point[0] += barLayout[i - 1].offsetCenter;
+                point[1] -= 20;
+                points.push(point);
+            }
+        }
+        var style = api.style({
+            stroke: api.visual('color'),
+            fill: null
+        });
+
+        return {
+            type: 'polyline',
+            shape: {
+                points: points
+            },
+            style: style
+        };
+    }
+
+    option = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: legendData
+        },
+        dataZoom: [{
+            type: 'slider',
+            start: 50,
+            end: 70
+        }, {
+            type: 'inside',
+            start: 50,
+            end: 70
+        }],
+        xAxis: {
+            data: xAxisData
+        },
+        yAxis: {},
+        series: [{
+            type: 'custom',
+            name: 'trend',
+            renderItem: renderItem,
+            itemStyle: {
+                normal: {
+                    borderWidth: 2
+                }
+            },
+            encode: {
+                x: 0,
+                y: encodeY
+            },
+            data: customData,
+            z: 100
+        }].concat(echarts.util.map(dataList, function (data, index) {
+            return {
+                type: 'bar',
+                animation: false,
+                name: legendData[index + 1],
+                itemStyle: {
+                    normal: {
+                        opacity:0.8
+                    }
+                },
+                data: data
+            };
+        }))
+    };;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+<script type="text/javascript">
+    var dom = document.getElementById("main2");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    var option = {
+        dataset: {
+            source: [
+                ['score', 'amount', 'product'],
+                [89.3, 120, 'C++'],
+                [57.1, 150, 'Java'],
+                [74.4, 520, 'Python'],
+                [50.1, 630, 'Hadoop'],
+                [89.7, 420, 'Spark'],
+                [68.1, 200, 'Pytorch'],
+                [19.6, 150, '脚本语言'],
+                [10.6,240, 'NLP'],
+                [32.7, 460, '数据结构']
+            ]
+//            ['智联招聘', '前程无忧', '中华英才', '网联英才', '中国人才热线', '卓博招聘', '一览英才', '528招聘', ']
+          //      [ 'Boss直聘', '拉勾', '100offer', 'e成', '内推', '招聘狗', '聘宝', '简寻']
+
+        },
+        grid: {containLabel: true},
+        xAxis: {name: '数量'},
+        yAxis: {type: 'category'},
+        visualMap: {
+            orient: 'horizontal',
+            left: 'center',
+            min: 10,
+            max: 100,
+            text: ['数量多', '数量少'],
+            // Map the score column to color
+            dimension: 0,
+            inRange: {
+                color: ['#D7DA8B', '#E15457']
+            }
+        },
+        series: [
+            {
+                type: 'bar',
+                encode: {
+                    // Map the "amount" column to X axis.
+                    x: 'amount',
+                    // Map the "product" column to Y axis
+                    y: 'product'
+                }
+            }
+        ]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+
+</html>

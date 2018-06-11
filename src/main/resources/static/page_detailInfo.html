@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>详细信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Digital_Host Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/multiple-select.js" type="text/javascript"></script>
+    <script src="js/user.js" type="text/javascript"></script>
+    <script src="js/detailInfo.js" type="text/javascript"></script>
+    <script src="js/search.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="css/main.css" rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" type="text/css" href="css/zzsc.css">-->
+    <link rel="stylesheet" href="css/dcalendar.picker.css"/>
+    <!-- webfonts -->
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link href="./css/multiple-select.css" rel="stylesheet"/>
+    <!----font-Awesome----->
+</head>
+<body>
+<div class="header" style="padding-bottom:0;">
+    <!-- container -->
+    <!-- top-nav -->
+    <div class="container">
+        <div class="logo">
+            <a href="home.html"><img src="images/logo.png" alt=""/></a>
+        </div>
+        <div class="header_bottom_ri    ght">
+            <div class="h_menu4"><!-- start h_menu4 -->
+                <a class="toggleMenu" href="#">Menu</a>
+                <ul class="nav">
+                    <li><a href="home.html">主页</a></li>
+
+                    <li><a href="page_search.html">职位搜索</a></li>
+                    <li><a href="page_matching.html">智能推荐</a></li>
+                    <li><a href=""class="hover">数据中心</a>
+                        <ul>
+                            <li><a href="page_stats.html">大数据职位分布</a></li>
+                            <li><a href="page_factor.html">薪酬影响因素</a></li>
+                            <li><a href="page_image.html">企业画像</a></li>
+                            <li><a href="page_image.html">技能图谱</a></li>
+                        </ul>
+                    </li>
+                    <li><a style="background: none"><img src="./images/user.png" class="more"/> </a>
+                        <ul style="color: #808080">
+                            <li><a href="page_collection.html"><span class="glyphicon glyphicon-heart"></span>  我的收藏</a></li>
+                            <li><a href="page_allInfo.html"><span class="glyphicon glyphicon-credit-card"></span>  我的信息</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-leaf"></span>  关于我们</a></li>
+                            <li><a href="page_signin.html"><span class="glyphicon glyphicon-log-out"></span>  登录/注册</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <script type="text/javascript" src="js/nav.js"></script>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+<div style="background: #f7f7f7">
+    <div class="container">
+        <div class="row search_title" style="margin-bottom: 20px">
+            <div class="col-md-6">
+                <span id="detail_position" class="search_title_main" style="margin-right: 30px;color: #4682B4">大数据工程师</span>
+                <span style="color: #808080;font-size: 24px" id="company_addr">北京-海淀区</span>
+                <p style="color: #808080;font-size: 24px" id="company_name">京东集团总部</p>
+                <span style="color: #808080;"id="detail_quality">外资</span>
+                <span>|</span>
+                <span style="color: #808080;"id="detail_level"> 5000人以上</span>
+            </div>
+            <div class="col-md-6" >
+                <span id="detail_salary" class="search_title_main" style="float: right;color: #4682B4">20000-40000</span></br>
+                <div style="clear:both; float: right;">
+                    <a type="button" class="title-btn" id="btn_isLike"  onclick="collected()"><span class="glyphicon glyphicon-heart"></span> 点击收藏</a>
+                    <a href="#comment_block" class="title-btn"  id="btn_comment"><span class="glyphicon glyphicon-comment"></span> 查看评价</a>
+                </div>
+            </div>
+        </div>
+        <div class="detail_block">
+            <!--<div class="row">-->
+            <!--<div class="col-md-4 litle_block">-->
+            <!--<h4>月薪:</h4>-->
+            <!--<h2 id="detail_salary">20000-40000</h2>-->
+            <!--</div>-->
+            <!--<div class="col-md-4 litle_block">-->
+            <!--<h4>职位:</h4>-->
+            <!--<h2 id="detail_position">大数据工程师</h2>-->
+            <!--</div>-->
+            <!--<div class="col-md-4 litle_block" style="border: none">-->
+            <!--<h4>关键词:</h4>-->
+            <!--<h4 id="detail_contact" style="color: #808080;padding-right:10px">五险一金-->
+            <!--员工旅游-->
+            <!--绩效奖金-->
+            <!--餐饮补贴-->
+            <!--通讯补贴-->
+            <!--专业培训-->
+            <!--年终奖金-->
+            <!--</h4>-->
+            <!--</div>-->
+            <!--</div>-->
+            <div class="row">
+                <div class="col-md-3">
+                    <!--<div class="detail_base_block">-->
+                    <!--<span>公司类别: </span>-->
+                    <!--<span id="detail_quality">外资</span>-->
+                    <!--</div>-->
+                    <!--<div class="detail_base_block">-->
+                    <!--<span>公司规模: </span>-->
+                    <!--<span id="detail_level">5000人以上</span>-->
+                    <!--</div>-->
+                    <div class="detail_base_block">
+                        <!--<span>学历要求: </span>-->
+                        <span><i class="fa fa-book">&nbsp;</i><span id="detail_edu">本科</span>学历</span>
+                        <!--<span id="detail_edu">本科</span>-->
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!--<div class="detail_base_block">-->
+                    <!--<span>学历要求: </span>-->
+                    <!--<span id="detail_edu">本科</span>-->
+                    <!--</div>-->
+                    <div class="detail_base_block">
+                        <!--<span>工作经验: </span>-->
+                        <!--<span id="detail_exp">8-9年</span>-->
+                        <span><i class="fa fa-suitcase" >&nbsp;</i><span id="detail_exp">8-9年</span></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="detail_base_block">
+                        <!--<span>招聘人数: </span>-->
+                        <!--<span id="detail_num">1人</span>-->
+                        <span><i class="fa fa-user">&nbsp;</i><span id="detail_num">1人</span></span>
+                    </div >
+                </div>
+                <div class="col-md-3">
+                    <div class="detail_base_block">
+                        <!--<span>发布时间: </span>-->
+                        <!--<span id="detail_time">2018-02-26</span>-->
+                        <span><i class="fa fa-clock-o">&nbsp;</i><span id="detail_time">2018-02-26</span>发布</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                    <span id="detail_contact" style="color: #808080;display: block;margin-top: 15px;margin-left: 30px">五险一金
+                        &nbsp;&nbsp;&nbsp;&nbsp;员工旅游
+                        &nbsp;&nbsp;&nbsp;&nbsp;绩效奖金
+                        &nbsp;&nbsp;&nbsp;&nbsp;餐饮补贴
+                        &nbsp;&nbsp;&nbsp;&nbsp;通讯补贴
+                        &nbsp;&nbsp;&nbsp;&nbsp;专业培训
+                        &nbsp;&nbsp;&nbsp;&nbsp;年终奖金
+                    </span>
+            </div>
+        </div>
+        <div class="detail_companyImage" >
+            <div class="row">
+                <div class="col-md-4 detail_companyImage_block1">
+                    <h4>竞争力比拼:</h4>
+
+                    <div class="detail_companyImage_block1" style="border-right: 1px solid #999;" id="rander">
+
+                    </div>
+                </div>
+                <div class="col-md-8 detail_companyImage_block2">
+                    <!--<h4>企业画像:</h4>-->
+                    <!--<div class="detail_companyImage_block1" id="imgblock2">-->
+
+                    <!--</div>-->
+
+                    <h4 id="imageH4">企业画像:<a class="btn btn-switch" onclick="shiftImage(1)">切换技能特长</a></h4>
+                    <div class="detail_companyImage_block1" style="display: block" id="imgblock2">
+
+                    </div>
+                    <div class="detail_companyImage_block1" id="imgblock1" style="display: none">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" style="padding-left: 15px;padding-right: 15px">
+            <button class="col-md-6 detail_info_title_show" style="background: #4682B4;color: #ffffff;" id="detail_info_title1" onclick="shiftFrame(1)">
+                <h3 >职位信息</h3>
+            </button>
+            <button class="col-md-6 detail_info_title_hide" style="background: #ffffff;color: #4682B4;" id="detail_info_title2" onclick="shiftFrame(2)">
+                <h3>公司信息</h3>
+            </button>
+            <!--<div class="col-md-6 detail_info_title_show" id="detail_info_title1" onclick="">-->
+            <!--<h3 >职位信息:</h3>-->
+            <!--</div>-->
+            <!--<div class="col-md-6 detail_info_title_hide" id="detail_info_title2" onclick="">-->
+            <!--<h3>公司信息:</h3>-->
+            <!--</div>-->
+        </div>
+        <div class="detail_info_block_show" id="detail_info_block1">
+                <pre id="detail_position_para">
+                    1、负责京东云大数据基础平台系统设计、性能优化和稳定性提升；
+
+                    【任职要求】
+
+
+                    1、有PB级大数据处理经验，编码能力强，具备生产系统快速 trouble-shooting 的经验和能力；
+
+                    2、三年以上hadoop/spark生态圈技术应用经验，包括但不限于hdfs/Hive/hbase/zookeeper/sqoop等；
+
+                    3. 对复杂系统的性能优化和稳定性提升有一线实战经验
+
+                    4. 熟悉Java程序设计，良好的系统架构规划能力
+
+                    5. 具备新技术学习意愿和快速的学习能力。
+
+                    6、对开源社区有贡献者优先.
+
+                    职能类别：系统架构设计师
+                </pre>
+        </div>
+        <div class="detail_info_block_hide" id="detail_info_block2">
+                <pre id="detail_company_para">
+                    1、负责京东云大数据基础平台系统设计、性能优化和稳定性提升；
+
+                    【任职要求】
+
+
+                    1、有PB级大数据处理经验，编码能力强，具备生产系统快速 trouble-shooting 的经验和能力；
+
+                    2、三年以上hadoop/spark生态圈技术应用经验，包括但不限于hdfs/Hive/hbase/zookeeper/sqoop等；
+
+                    3. 对复杂系统的性能优化和稳定性提升有一线实战经验
+
+                    4. 熟悉Java程序设计，良好的系统架构规划能力
+
+                    5. 具备新技术学习意愿和快速的学习能力。
+
+                    6、对开源社区有贡献者优先.
+
+                    职能类别：系统架
+                </pre>
+        </div>
+        <div class="detail_block" id="comment_block">
+            <div class="detail_score">
+                <div class="row">
+                    <div class="col-md-6" style="padding-left: 20px">
+                        <h3 style="color: #4682B4">用户评价:</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="title-btn" style="float: right;margin-bottom: 10px" onclick="fakeEvaluation()"><span class="glyphicon glyphicon-pencil"></span> 我要评价</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 litle_block">
+                        <h4>面试难度:</h4>
+                        <div class="rating rating-5">
+                            <i class="star-1">★</i>
+                            <i class="star-2">★</i>
+                            <i class="star-3">★</i>
+                            <i class="star-4">★</i>
+                            <i class="star-5">★</i>
+                        </div>
+                    </div>
+                    <div class="col-md-4 litle_block">
+                        <h4>公司满意度:</h4>
+                        <div class="rating rating-3-half">
+                            <i class="star-1">★</i>
+                            <i class="star-2">★</i>
+                            <i class="star-3">★</i>
+                            <i class="star-4">★</i>
+                            <i class="star-5">★</i>
+                        </div>
+                    </div>
+                    <div class="col-md-4 litle_block" style="border: none">
+                        <h4>推荐指数:</h4>
+                        <div class="rating rating-4-half">
+                            <i class="star-1">★</i>
+                            <i class="star-2">★</i>
+                            <i class="star-3">★</i>
+                            <i class="star-4">★</i>
+                            <i class="star-5">★</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail_comment">
+                <div class="result_title">
+                    <span class="t12">用户</span>
+                    <span class="t13">时间</span>
+                    <span class="t11">评价内容</span>
+                    <!--<span class="t14">详细</span>-->
+                </div>
+                <div class="result_content_item0">
+                    <span class="t12">153****5156</span>
+                    <span class="t13">2018-02-26</span>
+                    <span class="t11">面试不是蛮理想，感觉问到知识点面很窄，问的一些基础东西</span>
+                    <!--<button type="button" class="t14">查看详细</button>-->
+                </div>
+                <div class="result_content_item1">
+                    <span class="t12">134****4184</span>
+                    <span class="t13">2018-02-26</span>
+                    <span class="t11">公司都很好，虽然是星期六，都是面试的人和人事都非常的好，特别是人事，就那么几句话都觉得很暖心！</span>
+                    <!--<button type="button" class="t14">查看详细</button>-->
+                </div>
+                <div class="result_content_item0">
+                    <span class="t12">150****5673</span>
+                    <span class="t13">2018-02-26</span>
+                    <span class="t11">前台很nice，先做一套全英文笔试题（第一句有语法错误），考察基础知识、UML、shell命令等，试题语法错误比较多。</span>
+                    <!--<button type="button" class="t14">查看详细</button>-->
+                </div>
+                <div class="result_content_item1">
+                    <span class="t12">151****5183</span>
+                    <span class="t13">2018-02-26</span>
+                    <span class="t11"> 填了登记表，等了半天，面试官没问专业相关问题，可能是因为实际招聘职位和发布的职位相差太大，招聘的是招聘专员，发布的职位是人事经理，差别这么大，浪费时间，以前对这公司印象挺好的，现在，呵呵</span>
+                    <!--<button type="button" class="t14">查看详细</button>-->
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: 5px;margin-bottom: 50px">
+                <span id="comment_num" style="color: #808080">共4条 </span>
+                <button class="page-btn disabled" type="button" style="background: none;border:none;" disabled="disabled" onclick="lastPage()">上一页</button>
+                <button class="page-btn page-btn-active" type="button" style="background: none;border:none;" disabled="disabled" onclick="toPage(1)">1</button>
+                <button class="page-btn" type="button" style="background: none;border:none;" disabled="disabled" onclick="nextPage()">下一页</button>
+                <span id="comment_currentPage" style="color: #808080">第1页 </span>
+                <span id="comment_sumPage" style="color: #808080">共1页</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 footer-grid" >
+                <h3 >Feature and Services</h3>
+                <ul>
+                    <li><a href="#">职位搜索</a></li>
+                    <li><a href="#">智能推荐</a></li>
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职位评价</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">个人资料</a></li>
+                    <li><a href="#">竞争力比拼</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Data Statistic</h3>
+                <ul>
+                    <li><a href="#">职位影响因素</a></li>
+                    <li><a href="#">职位分布统计</a></li>
+                    <li><a href="#">企业画像</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li class="footer-address">
+                        <address>
+                            地址<br>
+                            南京大学, 鼓楼区<br>
+                            南京市, 江苏省 210089<br>
+                            <abbr title="Phone">P:</abbr> (5209) 12345678
+                        </address>
+                    </li>
+                    <li class="footer-address">
+                        <address>
+                            E-mail<br>
+                            151250022@nju.edu.cn
+                        </address>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="copy">
+            <p>Copyright &copy; 2018.棉花糖 All rights reserved.   </p>
+        </div>
+        <!-- footer-grids -->
+    </div>
+</div>
+
+
+</iframe>
+</body>
+<script type="text/javascript" src = "js/echarts.min.js"></script>
+<script type="text/javascript" src = "js/echarts-wordcloud.min.js"></script>
+
+<script type="text/javascript">
+    var loc = location.href;
+    var n1 = loc.length;//地址的总长度
+    var n2 = loc.indexOf("=");//取得=号的位置
+    var jobid = decodeURI(loc.substr(n2+1, n1-n2));//从=号后面的内容
+    getDetailInfo(jobid);
+    //    var element=document.getElementById("btn_isLike");
+    //    element.addEventListener("click",collected);
+    function fakeEvaluation(){
+        window.location.href="test.html?job="+jobid;
+    }
+</script>
+
+<script type="text/javascript">
+    //假数据
+    data ={"meanLevel": [73, 69, 91, 96, 84],
+        "personalLevel": [84, 67, 78, 84, 91]
+    }
+    showRadarInfo(data);
+
+
+</script>
+<script type="text/javascript">
+    //echart不能对display:none的元素进行绘图！！！！！
+    $("#imgblock2").css("display", "none");
+    $("#imgblock1").css("display", "block");
+    var keywords = [
+        {
+            "jobId": "30826746",
+            "word": "数据",
+            "weight": 3.1478150957601296
+        }
+    ]
+    showSkillInfo(keywords)
+    $("#imgblock1").css("display", "none");
+    $("#imgblock2").css("display", "block");
+
+</script>
+
+
+<script>
+    function shiftFrame(id) {
+        if (id == 2) {
+            $("#detail_info_title1").css("background","white")
+            $("#detail_info_title1").css("color","#4682B4")
+            $("#detail_info_title2").css("background","#4682b4")
+            $("#detail_info_title2").css("color","#ffffff")
+            $("#detail_info_block1").removeClass('detail_info_block_show');
+            $("#detail_info_block1").addClass("detail_info_block_hide");
+            $("#detail_info_block2").addClass("detail_info_block_show");
+            $("#detail_info_block2").removeClass("detail_info_block_hide");
+        } else {
+            $("#detail_info_title2").css("background","white")
+            $("#detail_info_title2").css("color","#4682B4")
+            $("#detail_info_title1").css("background","#4682B4")
+            $("#detail_info_title1").css("color","#ffffff")
+            $("#detail_info_block1").addClass('detail_info_block_show');
+            $("#detail_info_block1").removeClass("detail_info_block_hide");
+            $("#detail_info_block2").removeClass("detail_info_block_show");
+            $("#detail_info_block2").addClass("detail_info_block_hide");
+        }
+
+    }
+
+    function shiftImage(id) {
+        if (id == 2) {
+            $("#imageH4").html("企业画像:<button class=\"btn btn-switch\" onclick=\"shiftImage(1)\">切换技能特长</button>");
+            $("#imgblock1").css("display","none");
+            $("#imgblock2").css("display","block");
+            //假数据
+
+        } else {
+            $("#imageH4").html("技能特长:<button class=\"btn btn-switch\" onclick=\"shiftImage(2)\">切换企业画像</button>");
+            $("#imgblock2").css("display", "none");
+            $("#imgblock1").css("display", "block");
+
+        }
+    }
+</script>
+
+
+
+</html>

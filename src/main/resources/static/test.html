@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>用户评价</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Digital_Host Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/multiple-select.js" type="text/javascript"></script>
+    <script src="js/user.js" type="text/javascript"></script>
+    <script src="js/detailInfo.js" type="text/javascript"></script>
+    <script src="js/search.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="./raty/lib/jquery.raty.min.js" type="text/javascript"></script>
+    <!-- Custom Theme files -->
+    <link href="css/main.css" rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" type="text/css" href="css/zzsc.css">-->
+    <link rel="stylesheet" href="css/dcalendar.picker.css"/>
+    <!-- webfonts -->
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link href="./css/multiple-select.css" rel="stylesheet"/>
+    <!----font-Awesome----->
+</head>
+<body>
+<!-- header -->
+<div class="header" style="padding-bottom:0;">
+    <!-- container -->
+    <!-- top-nav -->
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt=""/></a>
+        </div>
+        <div class="header_bottom_right">
+            <div class="h_menu4"><!-- start h_menu4 -->
+                <a class="toggleMenu" href="#">Menu</a>
+                <ul class="nav">
+                    <li><a href="home.html">主页</a></li>
+                    <li><a href="page_search.html">职位搜索</a></li>
+                    <li><a href="page_matching.html">智能推荐</a></li>
+                    <li><a href=""class="hover">数据中心</a>
+                        <ul>
+                            <li><a href="page_stats.html">大数据职位分布</a></li>
+                            <li><a href="page_factor.html">薪酬影响因素</a></li>
+                            <li><a href="page_image.html">企业画像</a></li>
+                            <li><a href="page_image.html">技能图谱</a></li>
+                        </ul>
+                    </li>
+                    <li><a style="background: none"><img src="./images/more.png" class="more"/> </a>
+                        <ul style="color: #808080">
+                            <li><a href="page_collection.html"><span class="glyphicon glyphicon-heart"></span>  我的收藏</a></li>
+                            <li><a href="page_allInfo.html"><span class="glyphicon glyphicon-credit-card"></span>  我的信息</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-leaf"></span>  关于我们</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-log-out"></span>  退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <script type="text/javascript" src="js/nav.js"></script>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<div style="background: #f7f7f7">
+    <div class="container">
+        <div class="row search_title" style="margin-bottom: 20px">
+            <div class="col-md-6">
+                <span id="detail_position" class="search_title_main" style="margin-right: 30px;color: #4682B4">用户评价</span>
+                <p style="color: #808080;font-size: 24px" >请将您宝贵的经验留下～</p>
+            </div>
+        </div>
+        <div class="detail_block">
+            <div class="row">
+                <form action="" method="post" >
+                    <div class="row input-row">
+                        <div class="col-md-2 ">
+                            <h4 style="margin-top: 5px; margin-bottom: 5px">面试难度:</h4>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="input-group star-rating" id="difficulty" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row input-row">
+                        <div class="col-md-2 ">
+                            <h4 style="margin-top: 5px; margin-bottom: 5px">公司满意度:</h4>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="input-group star-rating" id="satisfactory">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row input-row">
+                        <div class="col-md-2 ">
+                            <h4 style="margin-top: 5px; margin-bottom: 5px">推荐指数:</h4>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="input-group star-rating" id="recommention">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row input-row">
+                        <div class="col-md-2 ">
+                            <h4 style="margin-top: 5px; margin-bottom: 240px">具体评价:</h4>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <textarea  style="border-radius: 2px;width: 500px; height: 250px;" placeholder="在此输入你的评价～" id="evaluation" ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row input-row">
+                        <div class="col-md-4 "style="text-align: center">
+                            <input type="submit" class="btn btn-primary" value="确定" onclick="success()"/>
+                        </div>
+                        <div class="col-md-4 "style="text-align: center">
+                            <input type="submit" class="btn btn-primary"value="取消" onclick="cancel()"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <!-- footer-grids -->
+        <div class="row">
+            <div class="col-md-3 footer-grid" >
+                <h3 >Feature and Services</h3>
+                <ul>
+                    <li><a href="#">职位搜索</a></li>
+                    <li><a href="#">智能推荐</a></li>
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职位评价</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">个人资料</a></li>
+                    <li><a href="#">竞争力比拼</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Data Statistic</h3>
+                <ul>
+                    <li><a href="#">职位影响因素</a></li>
+                    <li><a href="#">职位分布统计</a></li>
+                    <li><a href="#">企业画像</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li class="footer-address">
+                        <address>
+                            地址<br>
+                            南京大学, 鼓楼区<br>
+                            南京市, 江苏省 210089<br>
+                            <abbr title="Phone">P:</abbr> (5209) 12345678
+                        </address>
+                    </li>
+                    <li class="footer-address">
+                        <address>
+                            E-mail<br>
+                            151250022@nju.edu.cn
+                        </address>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="copy">
+            <p>Copyright &copy; 2018.棉花糖 All rights reserved.   </p>
+        </div>
+        <!-- footer-grids -->
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(function() {
+        $(".star-rating").raty({ width: 150,
+            size     : 24,
+            starOff  : './raty/lib/img/star-off-big.png',
+            starOn   : './raty/lib/img/star-on-big.png'
+        });
+        
+    });
+    function success(){
+        alert("评价成功");
+        getHref();
+    }
+    function cancel() {
+        getHref();
+    }
+    function getHref(){
+        var loc = location.href;
+        var n1 = loc.length;//地址的总长度
+        var n2 = loc.indexOf("=");//取得=号的位置
+        var jobid = decodeURI(loc.substr(n2+1, n1-n2));//从=号后面的内容
+        var phone = getCookie("phone");
+        if(phone =="") {
+            alert("请先登录！");
+            window.location.href = "page_signin.html";
+        } else {
+            var url = "/job/scan";
+            var json_data = {"phone": phone,
+                "jobId": jobid};
+            $.ajax({
+                type:'post',
+                url:url,
+                contentType:'application/json;charset=utf-8',
+                data: JSON.stringify(json_data),
+                success:function (data) {
+                    // do nothing
+                }
+            });
+
+            window.location.href = "page_detailInfo.html?job="+encodeURI(jobid);
+        }
+    }
+</script>
+</html>

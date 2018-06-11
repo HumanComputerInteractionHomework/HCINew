@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>职位推荐</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Digital_Host Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/multiple-select.js" type="text/javascript"></script>
+    <script src="js/user.js" type="text/javascript"></script>
+    <script src="js/search.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- 底栏分页按钮 -->
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/pageGroup.js"></script>
+    <!-- 底栏分页按钮 -->
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageGroup.css"/>
+    <!-- Custom Theme files -->
+    <link href="css/main.css" rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/dcalendar.picker.css"/>
+    <!-- webfonts -->
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link href="./css/multiple-select.css" rel="stylesheet"/>
+    <!----font-Awesome----->
+</head>
+<body>
+<!-- header -->
+<div class="header" style="padding-bottom:0;">
+    <!-- container -->
+    <!-- top-nav -->
+    <div class="container">
+        <div class="logo">
+            <a href="home.html"><img src="images/logo.png" alt=""/></a>
+        </div>
+        <div class="header_bottom_right">
+            <div class="h_menu4"><!-- start h_menu4 -->
+                <a class="toggleMenu" href="#">Menu</a>
+                <ul class="nav">
+                    <li><a href="home.html">主页</a></li>
+                    <li><a href="page_search.html">职位搜索</a></li>
+                    <li><a href="page_matching.html">智能推荐</a></li>
+                    <li><a href=""class="hover">数据中心</a>
+                        <ul>
+                            <li><a href="page_stats.html">大数据职位分布</a></li>
+                            <li><a href="page_factor.html">薪酬影响因素</a></li>
+                            <li><a href="page_image.html">企业画像</a></li>
+                            <li><a href="page_image.html">技能图谱</a></li>
+                        </ul>
+                    </li>
+                    <li><a style="background: none"><img src="./images/more.png" class="more"/> </a>
+                        <ul style="color: #808080">
+                            <li><a href="page_collection.html"><span class="glyphicon glyphicon-heart"></span>  我的收藏</a></li>
+                            <li><a href="page_allInfo.html"><span class="glyphicon glyphicon-credit-card"></span>  我的信息</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-leaf"></span>  关于我们</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-log-out"></span>  退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <script type="text/javascript" src="js/nav.js"></script>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<div style="background: #f6f6f6">
+    <div class="container">
+        <div class="row search_title" style="margin-bottom: 20px">
+            <div class="col-md-6">
+                <span id="career_search" class="search_title_main" style="margin-right: 50px;color: #4682B4">智能推荐</span>
+            </div>
+        </div>
+        <!--<div class="row" style="padding-left: 10px">-->
+            <!--<p style="color: #808080;font-family: '微软雅黑 Light';width: 70%">求职帮 智能推荐功能主要依据您浏览记录和填入的个人信息、求职意愿。您可拖动滚动条，订制匹配的阈值！</p>-->
+
+            <!--<div class="row">-->
+                <!--<div class="col-md-2 bar" id="text1">浏览记录：50%</div>-->
+                <!--<div class="col-md-3 progress" style="margin-top: 8px;margin-right: 40px;padding-left: 0px">-->
+                    <!--<div class="progress_bg">-->
+                        <!--<div class="progress_bar"></div>-->
+                    <!--</div>-->
+                    <!--<div class="progress_btn"></div>-->
+                <!--</div>-->
+                <!--<div id="text2" class="col-md-2 bar" >个人情况：50%</div>-->
+                <!--<div class="col-md-3" style="float: right;margin-right: 20px"><button class="search2-btn"style="color: #1f96e0;" onclick="recommendationRequest()">点击获得推荐</button></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="result_title">
+            <span class="t1">公司名称</span>
+            <span class="t2">职位</span>
+            <span class="t3">地点</span>
+            <span class="t4">薪酬</span>
+            <span class="t5">匹配度</span>
+            <span class="t6">收藏</span>
+            <span class="t7">不喜欢</span>
+        </div>
+        <div class="result_content">
+            <div id="baseline"></div>
+        </div>
+
+
+        <!--<div id="pageGro" class="cb" style="width: 400px;">-->
+            <!--<div class="pageUp">上一页</div>-->
+            <!--<div class="pageList" >-->
+                <!--<ul style="list-style:none;float: left;margin:0;padding:0;">-->
+                    <!--<li>1</li>-->
+                    <!--<li>2</li>-->
+                    <!--<li>3</li>-->
+                    <!--<li>4</li>-->
+                    <!--<li>5</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="pageDown">下一页</div>-->
+            <!--<div style="padding-top: 2px"><span id="pageId" class="pageButtonInfo" style="margin-top: 0px;list-style:none">第1页/共5页</span></div>-->
+        <!--</div>-->
+
+
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <!-- footer-grids -->
+        <div class="row">
+            <div class="col-md-3 footer-grid">
+                <h3>Feature and Services</h3>
+                <ul>
+                    <li><a href="#">职位搜索</a></li>
+                    <li><a href="#">智能推荐</a></li>
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职位评价</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">个人资料</a></li>
+                    <li><a href="#">竞争力比拼</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Data Statistic</h3>
+                <ul>
+                    <li><a href="#">职位影响因素</a></li>
+                    <li><a href="#">职位分布统计</a></li>
+                    <li><a href="#">企业画像</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li class="footer-address">
+                        <address>
+                            地址<br>
+                            南京市鼓楼区汉口路22号, 鼓楼区<br>
+                            南京市, 江苏省 210089<br>
+                            <abbr title="Phone">P:</abbr> (86)-25-83593186
+                        </address>
+                    </li>
+                    <li class="footer-address">
+                        <address>
+                            E-mail<br>
+                            213150727@nju.edu.cn
+                        </address>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="copy">
+            <p>Copyright &copy; 2018.二零三上的云 All rights reserved.</p>
+        </div>
+        <!-- footer-grids -->
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+        var tag = false,ox = 0,left = 150,bgleft = 0;
+        $('.progress_btn').mousedown(function(e) {
+            ox = e.pageX - left;
+            tag = true;
+        });
+        $(document).mouseup(function() {
+            tag = false;
+        });
+        $('.progress').mousemove(function(e) {//鼠标移动
+            if (tag) {
+                left = e.pageX - ox;
+                if (left <= 0) {
+                    left = 0;
+                }else if (left > 300) {
+                    left = 300;
+                }
+                $('.progress_btn').css('left', left);
+                $('.progress_bar').width(left);
+                $('#text1').html('求职意愿：'+parseInt((left/300)*100) + '%');
+                $('#text2').html('个人情况：'+parseInt((1-left/300)*100) + '%');
+            }
+        });
+        $('.progress_bg').click(function(e) {//鼠标点击
+            if (!tag) {
+                bgleft = $('.progress_bg').offset().left;
+                left = e.pageX - bgleft;
+                if (left <= 0) {
+                    left = 0;
+                }else if (left > 300) {
+                    left = 300;
+                }
+                $('.progress_btn').css('left', left);
+                $('.progress_bar').animate({width:left},300);
+                $('#text1').html('求职意愿：'+parseInt((left/300)*100) + '%');
+                $('#text2').html('个人情况：'+parseInt((1-left/300)*100) + '%');
+            }
+        });
+    });
+</script>
+
+<script>
+    careerItems = [{"jobId": 60816729, "jobName": "大数据平台开发工程师", "jobLocation": "南京", "salary": "0.5-1万/月", "companyName": "江苏鸿信系统集成有限公司", "matchDegree": 0.99},
+        {"jobId":66703365,"jobName":"大数据研发工程师","jobLocation":"南京","salary":"0.8-1.5万/月","companyName":"南京中新赛克科技有限责任公司","matchDegree":0.99},
+        {"jobId":66636610,"jobName":"高级JAVA软件工程师","jobLocation":"南京","salary":"8-15万/年","companyName":"上海若雅软件系统有限公司南京办事处","matchDegree":0.99},
+        {"jobId":64859913,"jobName":"大数据研发工程师","jobLocation":"南京","salary":"10-25万/年","companyName":"天泽信息产业股份有限公司","matchDegree":0.95},
+        {"jobId":63110210,"jobName":"高级软件工程师","jobLocation":"南京-江宁区","salary":"1-1.5万/月","companyName":"江苏引跑网络科技有限公司","matchDegree":0.93},
+        {"jobId":59613460,"jobName":"Java 开发工程师","jobLocation":"南京-玄武区","salary":"1-2万/月","companyName":"南京西桥科技有限公司","matchDegree":0.90},
+        {"jobId":63876193,"jobName":"JAVA高级软件工程师","jobLocation":"南京-玄武区","salary":"1-1.5万/月","companyName":"江苏骏环昇旺科技产业股份有限公司","matchDegree":0.87},
+        {"jobId":64983056,"jobName":"软件开发工程师","jobLocation":"南京-秦淮区","salary":"8-10万/年","companyName":"上海普华科技发展股份有限公司","matchDegree":0.88},
+        {"jobId":61303343,"jobName":"系统架构师","jobLocation":"南京-江宁区","salary":"7-10万/年","companyName":"江苏引跑网络科技有限公司","matchDegree":0.82},
+        {"jobId":60473658,"jobName":"高级测试工程师","jobLocation":"南京","salary":"0.8-1.5万/月","companyName":"南京茂毓通软件科技有限公司","matchDegree":0.80}
+        ];
+    showRecommendationItems(careerItems);
+</script>
+
+<script>
+    $(".like").click(function (e) {
+        e.stopPropagation()
+    });
+
+    $(".dislike").click(function (e) {
+        e.stopPropagation()
+    })
+</script>
+
+</html>

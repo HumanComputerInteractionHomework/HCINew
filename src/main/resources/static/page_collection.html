@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>我的收藏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Digital_Host Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <!-- 底栏分页按钮 -->
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/pageGroup.js"></script>
+    <!-- 底栏分页按钮 -->
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageGroup.css"/>
+
+    <!-- Custom Theme files -->
+    <link href="css/main.css" rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" type="text/css" href="css/zzsc.css">-->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link href="./css/multiple-select.css" rel="stylesheet"/>
+
+</head>
+<body>
+<!-- header -->
+<div class="header" style="padding-bottom:0;">
+    <!-- container -->
+    <!-- top-nav -->
+    <div class="container">
+        <div class="logo">
+            <a href="home.html"><img src="images/logo.png" alt=""/></a>
+        </div>
+        <div class="header_bottom_right">
+            <div class="h_menu4"><!-- start h_menu4 -->
+                <a class="toggleMenu" href="#">Menu</a>
+                <ul class="nav">
+                    <li><a href="home.html">主页</a></li>
+                    <li><a href="">职业规划</a></li>
+                    <li><a href="page_search.html">职位搜索</a></li>
+                    <li><a href="page_matching.html">智能推荐</a></li>
+                    <li><a href=""class="hover">数据中心</a>
+                        <ul>
+                            <li><a href="page_stats.html">大数据职位分布</a></li>
+                            <li><a href="page_factor.html">薪酬影响因素</a></li>
+                            <li><a href="page_image.html">企业画像</a></li>
+                            <li><a href="page_image.html">技能图谱</a></li>
+                        </ul>
+                    </li>
+                    <li><a style="background: none"><img src="./images/more.png" class="more"/> </a>
+                        <ul style="color: #808080">
+                            <li><a href="page_collection.html"><span class="glyphicon glyphicon-heart"></span>  我的收藏</a></li>
+                            <li><a href="page_allInfo.html"><span class="glyphicon glyphicon-credit-card"></span>  我的信息</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-leaf"></span>  关于我们</a></li>
+                            <li><a href=""><span class="glyphicon glyphicon-log-out"></span>  退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <script type="text/javascript" src="js/nav.js"></script>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<div style="background: #f6f6f6">
+    <div class="container">
+        <div class="row search_title">
+            <div class="col-md-6">
+                <span id="career_search" class="search_title_main" style="margin-right: 50px;color: #4682B4">我的收藏</span>
+                <span style="color: #808080" >排序</span>
+                <select class="sort-select">
+                    <option value="0">时间</option>
+                    <option value="1">公司名</option>
+                    <option value="2">职位</option>
+                    <option value="3">地点</option>
+                    <option value="4">薪酬</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="result_title">
+            <span class="t1">公司名称</span>
+            <span class="t2">职位</span>
+            <span class="t3">地点</span>
+            <span class="t4">薪酬</span>
+            <span class="t5">匹配度</span>
+            <span class="t6">竞争力</span>
+            <span class="t7">取消收藏</span>
+        </div>
+        <div class="result_content">
+            <div id="baseline"></div>
+        <div id="pageGro" class="cb" style="width: 400px;">
+            <div class="pageUp">上一页</div>
+            <div class="pageList" >
+                <ul style="list-style:none;float: left;margin:0;padding:0;">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+            <div class="pageDown">下一页</div>
+            <div style="padding-top: 2px"><span id="pageId" class="pageButtonInfo" style="margin-top: 0px;list-style:none">第1页/共5页</span></div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <!-- footer-grids -->
+        <div class="row">
+            <div class="col-md-3 footer-grid">
+                <h3>Feature and Services</h3>
+                <ul>
+                    <li><a href="#">职位搜索</a></li>
+                    <li><a href="#">智能推荐</a></li>
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职位评价</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Customer Services</h3>
+                <ul>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">个人资料</a></li>
+                    <li><a href="#">竞争力比拼</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Data Statistic</h3>
+                <ul>
+                    <li><a href="#">职位影响因素</a></li>
+                    <li><a href="#">职位分布统计</a></li>
+                    <li><a href="#">企业画像</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li class="footer-address">
+                        <address>
+                            地址<br>
+                            东南大学路2号, 江宁区<br>
+                            南京市, 江苏省 210089<br>
+                            <abbr title="Phone">P:</abbr> (5209) 12345678
+                        </address>
+                    </li>
+                    <li class="footer-address">
+                        <address>
+                            E-mail<br>
+                            213150727@seu.edu.cn
+                        </address>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="copy">
+            <p>Copyright &copy; 2018.二零三上的云 All rights reserved.</p>
+        </div>
+        <!-- footer-grids -->
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src = "js/echarts.min.js"></script>
+<script type="text/javascript" src = "js/echarts-wordcloud.min.js"></script>
+<script>
+    conlectionRequest();
+    function image(i) {
+        $('.detail_companyImage').remove();
+        var adddiv = '<div class="detail_companyImage" style="margin-bottom: 2px">\n' +
+            '                <div class="row">\n' +
+            '                    <div class="col-md-4 detail_companyImage_block1">\n' +
+            '                       ' +
+            '                        <div class="detail_companyImage_block1" style="border-right: 1px solid #999;" id="rander">\n' +
+            '                        </div>\n' +
+            '                    </div>\n' +
+            '                    <div class="col-md-8 detail_companyImage_block2">\n' +
+            '                        <div class="detail_companyImage_block1" id="imgblock2">\n' +
+            '\n' +
+            '                        </div>\n' +
+            '                    </div>\n' +
+            '                </div>\n' +
+            '\n' +
+            '            </div>';
+        var id="item"+i;
+        $("#" + id + "").after(adddiv);
+        competition();
+        companyImage();
+    }
+
+    function competition() {
+        var dom = document.getElementById("rander");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        option = {
+            title: {
+                text: ''
+            },
+            tooltip: {},
+            legend: {
+                data: ['平均水平','个人水平']
+            },
+            radar: {
+                // shape: 'circle',
+                name: {
+                    textStyle: {
+                        color: '#808080',
+                        backgroundColor: '#fff',
+                        borderRadius: 3,
+                        padding: [3, 5]
+                    }
+                },
+                indicator: [
+                    { name: '第一学历', max: 100},
+                    { name: '管理', max: 100},
+                    { name: '团队协作', max: 100},
+                    { name: '职业技能', max: 100},
+                    { name: '薪酬', max: 100}
+                ]
+            },
+            series: [{
+                name: '',
+                type: 'radar',
+                data : [
+                    {
+                        value : [73, 69, 91, 96, 84],
+                        name : '平均水平'
+                    },
+                    {
+                        value : [84, 67, 78, 84, 91],
+                        name : '个人水平'
+                    }
+                ]
+            }]
+        };;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    }
+
+    function companyImage() {
+        var keywords = {
+            "onZero": 931,
+            "showPlayBtn": 25,
+            "breadcrumb": 119,
+            "colorMappingBy": 85,
+            "id": 18,
+            "blurSize": 85,
+            "minOpacity": 50,
+            "maxOpacity": 54,
+            "prevIcon": 12,
+            "children": 21,
+            "shape": 98,
+            "nextIcon": 12,
+            "showNextBtn": 17,
+            "stopIcon": 21,
+            "visibleMin": 83,
+            "visualDimension": 97,
+            "colorSaturation": 56,
+            "colorAlpha": 66,
+            "emptyItemWidth": 10,
+            "inactiveOpacity": 4,
+            "activeOpacity": 4,
+            "showPrevBtn": 19,
+            "playIcon": 26,
+            "ellipsis": 19,
+            "gapWidth": 19,
+            "borderColorSaturation": 10,
+            "handleIcon": 2,
+            "handleStyle": 6,
+            "borderType": 1,
+            "constantSpeed": 1,
+            "polyline": 2,
+            "blendMode": 1,
+            "dataBackground": 1,
+            "textAlign": 1,
+            "textBaseline": 1,
+            "brush": 3
+        };
+        var data = [];
+        for (var key in keywords) {
+            data.push({
+                name: key,
+                value: Math.sqrt(keywords[key])
+            })
+        }
+        var maskImage = new Image();
+        maskImage.src = 'images/logo2.png';
+        var option = {
+            backgroundColor: '#fff',
+            title: {
+                text: '',
+            },
+            tooltip : {},
+            series : [ {
+                type : 'wordCloud',
+                shape:'smooth',
+                gridSize : 2,
+                sizeRange : [ 40, 60 ],
+                rotationRange : [ 1, 60 ],
+                textStyle : {
+                    normal : {
+                        color : function() {
+                            return 'rgb('
+                                + [ Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160) ]
+                                    .join(',') + ')';
+                        }
+                    },
+                    emphasis : {
+                        shadowBlur : 10,
+                        shadowColor : '#333'
+                    }
+                },
+                data : data
+            } ]
+        };
+        var myChart = echarts.init(document.getElementById('imgblock2'));
+        maskImage.onload = function() {
+            myChart.setOption(option);
+        };
+        window.onresize = function() {
+            myChart.resize();
+        }
+    }
+
+</script>
+
+
+</html>
