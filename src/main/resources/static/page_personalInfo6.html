@@ -40,6 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <a class="toggleMenu" href="#">Menu</a>
                 <ul class="nav">
                     <li><a href="home.html">主页</a></li>
+                    <li><a href="">职业规划</a></li>
                     <li><a href="page_search.html">职位搜索</a></li>
                     <li><a href="page_matching.html">智能推荐</a></li>
                     <li><a href=""class="hover">数据中心</a>
@@ -70,53 +71,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="overlay" >
         <div class="container">
             <div class="row" id="basicInfo" style="display: block;">
-            <!-- /.signup form -->
-            <div class="col-md-5" style="margin-left: 29%;margin-right: auto">
-
-                <div class="signup-header wow fadeInUp" style="margin-top: 80px;margin-bottom: 10px; padding-bottom: 10px">
-                    <h3 class="form-title text-center">个人信息(6/6)</h3>
-                    <h4 class="form-title text-center"><span class="glyphicon glyphicon-road"></span>  求职意向(1/2)</h4>
-                    <form class="form-header" role="form" >
-
-                        <div class="form-group">
-                            <input class="form-control input-lg" id="expect-salary" type="text" required oninvalid="setCustomValidity('请输入理想薪资');" onFocus=" if(this.value=='理想薪资') this.value=''" onBlur="if(this.value=='') this.value='理想薪资'" value="理想薪资">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control input-lg" id="expect-low" type="text" required oninvalid="setCustomValidity('请输入最低可接受薪资');" onFocus=" if(this.value=='最低可接受薪资') this.value=''" onBlur="if(this.value=='') this.value='最低薪资'" value="最低可接受薪资">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control input-lg" id="expect-high" type="text" required oninvalid="setCustomValidity('请输入最高期望薪资');" onFocus=" if(this.value=='最高期望薪资') this.value=''" onBlur="if(this.value=='') this.value='最高期望薪资'" value="最高期望薪资">
-                        </div>
-
-                        <div class="form-group">
-                            <input class="form-control input-lg"  type="text" id="expect-position" required oninvalid="setCustomValidity('请输入期望职位');" onFocus=" if(this.value=='职位') this.value=''" onBlur="if(this.value=='') this.value='职位'" value="职位">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control input-lg"  type="text" id="expect-type" required oninvalid="setCustomValidity('请输入职业类型');" onFocus=" if(this.value=='职业类型') this.value=''" onBlur="if(this.value=='') this.value='职业类型'" value="职业类型">
-                        </div>
-                        <p id="projectPage1"class="text-center" style="margin-top: 15px"><button class="page-btn disabled" type="button" disabled="disabled" style="background: none;border:none;" onclick="lastPage()">上一页</button>
-                            <button class="page-btn page-btn-active" type="button" style="background: none;border:none;" disabled="disabled" onclick="toPage(1)">1</button>
-                            <button class="page-btn" type="button" style="background: none;border:none;" onclick="toPage(2)">2</button>
-                            <button class="page-btn" type="button" style="background: none;border:none;" onclick="nextPage()">下一页</button></p>
-                        <div class="form-group last">
-                            <input type="button" class="btn btn-warning btn-block btn-lg" value="下一步" onclick="infoSubmit_6()">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-            <div class="row" id="moreInfo" style="display: none">
                 <!-- /.signup form -->
-                <div class="col-md-5" style="margin-left: 29%">
+                <div class="col-md-5" style="margin-left: 29%;margin-right: auto">
 
                     <div class="signup-header wow fadeInUp" style="margin-top: 80px;margin-bottom: 10px; padding-bottom: 10px">
                         <h3 class="form-title text-center">个人信息(6/6)</h3>
-                        <h4 class="form-title text-center"><span class="glyphicon glyphicon-road"></span>  求职意向(2/2)</h4>
+                        <h4 class="form-title text-center"><span class="glyphicon glyphicon-road"></span>  求职意向</h4>
                         <form class="form-header" role="form" >
+                            <div class="form-group">
+                                <select  class="form-control input-lg" id="salary"  style="border-radius: 2px" required onchange="incomeSelected(this)">
+                                    <option value="0">理想月收入</option>
+                                    <option value="<5k"><5k</option>
+                                    <option value="5k-10k">5k-10k</option>
+                                    <option value="10k-15k">10k-15k</option>
+                                    <option value="15k-20k">15k-20k</option>
+                                    <option value="20k-30k">20k-30k</option>
+                                    <option value="30k-50k">30k-50k</option>
+                                    <option value=">50k">>50k</option>
+                                </select>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <input class="form-control input-lg"  type="text" id="expect-position" required oninvalid="setCustomValidity('请输入期望职位');" onFocus=" if(this.value=='职位') this.value=''" onBlur="if(this.value=='') this.value='职位'" value="职位">
+                            </div>
+
                             <div class="form-group form-select">
                                 <div>
-                                    <label class="infoinput" id="label_city"style="color: #333;display: block;margin-top: 194px;margin-left:18px;left:30px;font-family: 宋体" >工作城市</label>
+                                    <label class="infoinput" id="label_city"style="color: #333;display: block;margin-top: 330px;margin-left:18px;left:30px;font-family: 宋体" >工作城市</label>
                                     <select multiple="multiple" style="color: black;width: 417px; "
                                             class="multiple-groupSelect form-control input-lg" id="expect-city" required="required">
                                         <optgroup label="热门城市">
@@ -171,9 +154,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         </optgroup>
                                     </select>
                                 </div>
-                        </div>
+                            </div>
                             <div class="form-group  form-select">
-                                <label class="infoinput" id="label_quality"style="color: #333;display: block;margin-top: 264px;margin-left:18px;left:30px;font-family: 宋体">公司性质</label>
+                                <label class="infoinput" id="label_quality"style="color: #333;display: block;margin-top: 400px;margin-left:18px;left:30px;font-family: 宋体">公司性质</label>
                                 <select multiple="multiple" class="multiple-select form-control input-lg" style="width: 417px" id="expect-quality">
                                     <option value="国企">国企</option>
                                     <option value="私企">私企</option>
@@ -186,7 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <script src="js/multiple-select.js"></script>
                             </div>
                             <div class="form-group  form-select">
-                                <label class="infoinput" id="label_level"style="color: #333;display: block;margin-top: 334px;margin-left:18px;left:30px;font-family: 宋体">公司规模</label>
+                                <label class="infoinput" id="label_level"style="color: #333;display: block;margin-top: 470px;margin-left:18px;left:30px;font-family: 宋体">公司规模</label>
                                 <select multiple="multiple" class="multiple-select form-control input-lg" style="width: 417px;" id="expect-level">
                                     <option value=""><10人</option>
                                     <option value="">10-50人</option>
@@ -198,77 +181,79 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </select>
                                 <script src="js/multiple-select.js"></script>
                             </div>
-                            <div class="form-group">
-                                <textarea style="float: left" id="expect-desc" cols="45%" rows="4"placeholder="  请写下您的职位期待..." ></textarea>
-                            </div>
-                            <p class="text-center" style="margin-top: 15px"><button class="page-btn disabled" type="button" style="background: none;border:none;" onclick="lastPage()">上一页</button>
-                                <button class="page-btn " type="button" style="background: none;border:none;" onclick="toPage(1)">1</button>
-                                <button class="page-btn page-btn-active" type="button" style="background: none;border:none;" disabled="disabled" onclick="toPage(2)">2</button>
-                                <button class="page-btn" type="button" style="background: none;border:none;" disabled="disabled" onclick="nextPage()">下一页</button>
-                            </p>
                             <div class="form-group last">
                                 <input type="button" class="btn btn-warning btn-block btn-lg" value="下一步" onclick="infoSubmit_6()">
                             </div>
+
+
+
+
                         </form>
                     </div>
                 </div>
             </div>
 
+
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-3 footer-grid" >
-        <h3 >Feature and Services</h3>
-        <ul>
-            <li><a href="#">职位搜索</a></li>
-            <li><a href="#">智能推荐</a></li>
-            <li><a href="#">职业规划</a></li>
-            <li><a href="#">职位评价</a></li>
-        </ul>
+    <div class="footer">
+        <div class="container">
+            <!-- footer-grids -->
+            <div class="row">
+                <div class="col-md-3 footer-grid">
+                    <h3>Feature and Services</h3>
+                    <ul>
+                        <li><a href="#">职位搜索</a></li>
+                        <li><a href="#">智能推荐</a></li>
+                        <li><a href="#">职业规划</a></li>
+                        <li><a href="#">职位评价</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h3>Customer Services</h3>
+                    <ul>
+                        <li><a href="#">我的收藏</a></li>
+                        <li><a href="#">个人资料</a></li>
+                        <li><a href="#">竞争力比拼</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h3>Data Statistic</h3>
+                    <ul>
+                        <li><a href="#">职位影响因素</a></li>
+                        <li><a href="#">职位分布统计</a></li>
+                        <li><a href="#">企业画像</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h3>Contact us</h3>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li class="footer-address">
+                            <address>
+                                地址<br>
+                                南京大学, 鼓楼区<br>
+                                南京市, 江苏省 210089<br>
+                                <abbr title="Phone">P:</abbr> (5209) 12345678
+                            </address>
+                        </li>
+                        <li class="footer-address">
+                            <address>
+                                E-mail<br>
+                                151250022@nju.edu.cn
+                            </address>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="copy">
+                <p>Copyright &copy; 2018.棉花糖 All rights reserved.</p>
+            </div>
+            <!-- footer-grids -->
+        </div>
     </div>
-    <div class="col-md-3 footer-grid">
-        <h3>Customer Services</h3>
-        <ul>
-            <li><a href="#">我的收藏</a></li>
-            <li><a href="#">个人资料</a></li>
-            <li><a href="#">竞争力比拼</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3 footer-grid">
-        <h3>Data Statistic</h3>
-        <ul>
-            <li><a href="#">职位影响因素</a></li>
-            <li><a href="#">职位分布统计</a></li>
-            <li><a href="#">企业画像</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3 footer-grid">
-        <h3>Contact us</h3>
-        <ul>
-            <li><a href="#">关于我们</a></li>
-            <li class="footer-address">
-                <address>
-                    地址<br>
-                    南京大学, 鼓楼区<br>
-                    南京市, 江苏省 210089<br>
-                    <abbr title="Phone">P:</abbr> (5209) 12345678
-                </address>
-            </li>
-            <li class="footer-address">
-                <address>
-                    E-mail<br>
-                    151250022@nju.edu.cn
-                </address>
-            </li>
-        </ul>
-    </div>
-    <div class="clearfix"> </div>
-</div>
-<div class="copy">
-    <p>Copyright &copy; 2018.棉花糖 All rights reserved.   </p>
-</div>
-<!-- footer-grids -->
+
 </body>
 <script src="js/multiple-select.js"></script>
 <script>

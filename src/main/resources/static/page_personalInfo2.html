@@ -40,6 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <a class="toggleMenu" href="#">Menu</a>
                 <ul class="nav">
                     <li><a href="home.html">主页</a></li>
+                    <li><a href="">职业规划</a></li>
                     <li><a href="page_search.html">职位搜索</a></li>
                     <li><a href="page_matching.html">智能推荐</a></li>
                     <li><a href=""class="hover">数据中心</a>
@@ -102,11 +103,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <label class="infoinput" id="label_to"style="display: block;margin-top: 4px; left:30px;font-family: 宋体">毕业时间</label>
                                     <input id='toTime' type='text' style="border-radius: 2px;width: 204px" class="input-lg form-control"  required onFocus="$('#label_to').hide();"onBlur="if(this.value=='') $('#label_to').show();"onchange="$('#label_to').hide();"/>
                                 </div>
-                                    <!--<input type="date" data-format="yyyy-MM-dd" style="border-radius: 2px" class="input-lg form-control"  required oninvalid="setCustomValidity('请输入出生日期！');" onFocus=" if(this.value=='请输入出生日期！') this.value=''" onBlur="if(this.value=='') this.value='请输入出生日期！'" value="请输入出生日期！" id="birthday">-->
+                                <!--<input type="date" data-format="yyyy-MM-dd" style="border-radius: 2px" class="input-lg form-control"  required oninvalid="setCustomValidity('请输入出生日期！');" onFocus=" if(this.value=='请输入出生日期！') this.value=''" onBlur="if(this.value=='') this.value='请输入出生日期！'" value="请输入出生日期！" id="birthday">-->
                             </div>
                             <!--<div class="form-group">-->
-                                <!--<label class="infoinput" id="label_to"style="display: block;margin-top: 262px">毕业时间</label>-->
-                                <!--<input id='toTime' type='text' style="border-radius: 2px;width: 418px" class="input-lg form-control"  required onFocus="$('#label_to').hide();"onBlur="if(this.value=='') $('#label_to').show();"onchange="$('#label_to').hide();"/>-->
+                            <!--<label class="infoinput" id="label_to"style="display: block;margin-top: 262px">毕业时间</label>-->
+                            <!--<input id='toTime' type='text' style="border-radius: 2px;width: 418px" class="input-lg form-control"  required onFocus="$('#label_to').hide();"onBlur="if(this.value=='') $('#label_to').show();"onchange="$('#label_to').hide();"/>-->
                             <!--</div>-->
                             <div class="form-group">
                                 <input class="form-control input-lg honor-name"  type="text"  onFocus=" if(this.value=='荣誉与奖励') this.value=''" onBlur="if(this.value=='') this.value='荣誉与奖励'" value="荣誉与奖励">
@@ -138,7 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </select>
                                 </div>
                                 <div class="col-md-6"style="padding-left: 5px;color: black">
-                                    <p style="float:right;margin-top: 15px;color: #333;font-size: 16px">更多荣誉请<button type="button" style="background: none;border:none;" onclick="addMoreHonor()">点击添加</button></p>
+                                    <p style="float:right;margin-top: 15px;color: #333;font-size: 16px"><button type="button" style="background: none;border:none;" onclick="addMoreHonor()">点击添加更多荣誉</button></p>
                                 </div>
                             </div>
                             <div class="form-group last">
@@ -186,7 +187,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input class="form-control input-lg honor-name"  type="text"  onFocus=" if(this.value=='荣誉与奖励') this.value=''" onBlur="if(this.value=='') this.value='荣誉与奖励'" value="荣誉与奖励">
+                                <input class="form-control input-lg honor-name"  type="text"  onFocus=" if(this.value=='荣誉与奖励') this.value=''" onBlur="if(this.value=='') this.value='荣誉与奖励'" value="荣誉与奖励" >
                             </div>
                             <div class="form-group row" >
                                 <div class="col-md-6" style="padding-right: 5px">
@@ -254,18 +255,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </form>
                     </div>
 
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
-</div>
 
     <div class="footer">
         <div class="container">
             <!-- footer-grids -->
             <div class="row">
-                <div class="col-md-3 footer-grid" >
-                    <h3 >Feature and Services</h3>
+                <div class="col-md-3 footer-grid">
+                    <h3>Feature and Services</h3>
                     <ul>
                         <li><a href="#">职位搜索</a></li>
                         <li><a href="#">智能推荐</a></li>
@@ -312,12 +313,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="clearfix"> </div>
             </div>
             <div class="copy">
-                <p>Copyright &copy; 2018.棉花糖 All rights reserved.   </p>
+                <p>Copyright &copy; 2018.棉花糖 All rights reserved.</p>
             </div>
             <!-- footer-grids -->
         </div>
     </div>
-</div>
 </body>
 <script type="text/javascript" src="js/dcalendar.picker.js"></script>
 <script type="text/javascript">

@@ -130,7 +130,7 @@ function updatePwd() {
 //信息填写，提交第一页,非必填项若为空以空串形式
 function infoSubmit_1() {
     var birthday = $("#birthday").val();
-    var jobYear = $("#jobYear").val();
+
     var gender = $("#gender").val();
     var salary = $("#salary").val();
     var highSalary;
@@ -147,80 +147,75 @@ function infoSubmit_1() {
         }
     }
     var address = $("#address").val();
-    var basicSalary = $("#basicSalary").val();
-    var bonus = $("#bonus").val();
-    var commission = $("#Commission").val();
-    var stockShareOption = $("#stockShareOption").val();
-    var submit_data;
+
     if (birthday == "") {
         alert("请输入您的生日");
-    } else if (jobYear == "") {
-        alert("请输入您的开始工作年份");
     } else if (address =="居住地址") {
         alert("请输入您的居住地");
         $("#address").focus();
     } else if (gender == "0") {
-        $("#gender").val("0")
         alert("请选择您的性别");
     } else if (salary == "0") {
-         alert("请输入您的收入");
-    } else if ( (basicSalary != "基本工资" && (isNaN(basicSalary)) || (bonus != "补贴" && isNaN(bonus)) || (commission != "奖金/佣金" && isNaN(commission)) ||
-            (stockShareOption != "股票期权" && isNaN(stockShareOption)))) {
-        alert("请将工资福利折价输入")
-    } else
-        {
-        if (basicSalary != "基本工资")
-            basicSalary = basicSalary;
-        else
-            basicSalary = "0";
-        if (bonus != "补贴")
-            bonus = bonus;
-        else
-            bonus = "0";
-        if (commission != "奖金/佣金")
-            commission = commission;
-        else
-            commission = "0";
-        if (stockShareOption != "股票期权")
-            stockShareOption = stockShareOption;
-        else
-            stockShareOption = "0";
-        var phone = getCookie("phone");
-        var realName = getCookie("name");
-        submit_data = {
-            "phone": phone,
-            "realName":realName,
-            "birthday": birthday,
-            "gender": gender,
-            "jobYear": jobYear,
-            "address": address,
-            "salary": salary,
-            "lowSalary":lowSalary,
-            "highSalary":highSalary,
-            "basicSalary":basicSalary,
-            "bonus": bonus,
-            "Commission": commission,
-            "stockShareOption": stockShareOption
-        };
-        var url="/user/userBasicMessage";
-        $.ajax({
-            type:'post',
-            url:url,
-            contentType:'application/json;charset=utf-8',
-            data:JSON.stringify(submit_data),
-            success:function (data) {
-                if (data.result == true) {
-                    //跳转
-                    alert("基本信息输入完成！");
-                    window.location.href = "page_personalInfo2.html";
-                } else {
-                    alert(data.message);
-                }
-            }
-        });
+        alert("请输入您的收入");
 
     }
+
+    alert("基本信息输入完成！");
+    window.location.href = "page_personalInfo2.html";
+
+    // } else
+    //     {
+    //     if (basicSalary != "基本工资")
+    //         basicSalary = basicSalary;
+    //     else
+    //         basicSalary = "0";
+    //     if (bonus != "补贴")
+    //         bonus = bonus;
+    //     else
+    //         bonus = "0";
+    //     if (commission != "奖金/佣金")
+    //         commission = commission;
+    //     else
+    //         commission = "0";
+    //     if (stockShareOption != "股票期权")
+    //         stockShareOption = stockShareOption;
+    //     else
+    //         stockShareOption = "0";
+    //     var phone = getCookie("phone");
+    //     var realName = getCookie("name");
+    //     submit_data = {
+    //         "phone": phone,
+    //         "realName":realName,
+    //         "birthday": birthday,
+    //         "gender": gender,
+    //         "jobYear": jobYear,
+    //         "address": address,
+    //         "salary": salary,
+    //         "lowSalary":lowSalary,
+    //         "highSalary":highSalary,
+    //         "basicSalary":basicSalary,
+    //         "bonus": bonus,
+    //         "Commission": commission,
+    //         "stockShareOption": stockShareOption
+    //     };
+    //     var url="/user/userBasicMessage";
+    // $.ajax({
+    //     type:'post',
+    //     url:url,
+    //     contentType:'application/json;charset=utf-8',
+    //     data:JSON.stringify(submit_data),
+    //     success:function (data) {
+    //         if (data.result == true) {
+    //             //跳转
+
+    //         } else {
+    //             alert(data.message);
+    //         }
+    //     }
+    // });
+
 }
+
 
 //第二个页面提交
 function infoSubmit_2() {
@@ -378,7 +373,7 @@ function infoSubmit_4() {
                 jsonStr += ",{\"phone\":\""+phone+"\",\"Companyname\":\""+companyName+"\",\"companyQuality\":\""+companyQuality+"\",\"companyLevel\":\""+companyLevel+
                     "\",\"job\":\""+job+"\",\"fromTime\":\""+job+"\",\"toTime\":\""+toTime+"\",\"description\":\""+description+"\"}";
             }
-        count++;
+            count++;
         } else {
             alert("请将必填信息填写完整！");
             tag = false;
@@ -442,7 +437,7 @@ function infoSubmit_5() {
             return false;//退出循环。而非退出函数
         }
     });
-        jsonStr +="]";
+    jsonStr +="]";
     //填写信息不完整，tag=false
     if (!tag)
         return false;
@@ -473,82 +468,84 @@ function infoSubmit_6() {
         window.location.href = "page_signin.html";
     }
 
-    var salary = $("#expect-salary").val();
-    var lowSalary = $("#expect-low").val();
-    var highSalary = $("#expect-high").val();
-    var location = $("#expect-city").val()+"";
-    var companyQuality = $("#expect-quality").val()+"";
-    var companyLevel = $("#expect-level").val()+"";
-    var jobType = $("#expect-type").val();
-    var description = $("#expect-desc").val();
+    // var salary = $("#expect-salary").val();
+    // var lowSalary = $("#expect-low").val();
+    // var highSalary = $("#expect-high").val();
+    // var location = $("#expect-city").val()+"";
+    // var companyQuality = $("#expect-quality").val()+"";
+    // var companyLevel = $("#expect-level").val()+"";
+    // var jobType = $("#expect-type").val();
+    // // var description = $("#expect-desc").val();
 
     //把字符串拆分为数组
-    var locationArr = location.split(",");
-    var qualityArr = companyQuality.split(",");
-    var levelArr = companyLevel.split(",");
+    // var locationArr = location.split(",");
+    // var qualityArr = companyQuality.split(",");
+    // var levelArr = companyLevel.split(",");
 
-    var locationBeans = "["
-    for(var i = 0; i < locationArr.length; i++) {
-        if (i == 0) {
-            locationBeans += "{ \"phone\":\""+ phone+"\",\"expectLocation\":\""+locationArr[i]+"\"}";
-        } else {
-            locationBeans += ",{ \"phone\":\""+ phone+"\",\"expectLocation\":\""+locationArr[i]+"\"}";
-        }
-    }
-    locationBeans+="]"
+    // var locationBeans = "["
+    // for(var i = 0; i < locationArr.length; i++) {
+    //     if (i == 0) {
+    //         locationBeans += "{ \"phone\":\""+ phone+"\",\"expectLocation\":\""+locationArr[i]+"\"}";
+    //     } else {
+    //         locationBeans += ",{ \"phone\":\""+ phone+"\",\"expectLocation\":\""+locationArr[i]+"\"}";
+    //     }
+    // }
+    // locationBeans+="]"
+    //
+    // var qualityBeans = "["
+    // for(var i = 0; i < qualityArr.length; i++) {
+    //     if (i == 0) {
+    //         qualityBeans += "{ \"phone\":\""+ phone+"\",\"expectCompanyQuality\":\""+qualityArr[i]+"\"}";
+    //     } else {
+    //         qualityBeans += ",{ \"phone\":\""+ phone+"\",\"expectCompanyQuality\":\""+qualityArr[i]+"\"}";
+    //     }
+    // }
+    // qualityBeans+="]"
+    //
+    // var levelBeans = "["
+    // for(var i = 0; i < levelArr.length; i++) {
+    //     if (i == 0) {
+    //         levelBeans += "{ \"phone\":\""+ phone+"\",\"expectCompanyLevel\":\""+levelArr[i]+"\"}";
+    //     } else {
+    //         levelBeans += ",{ \"phone\":\""+ phone+"\",\"expectCompanyLevel\":\""+levelArr[i]+"\"}";
+    //     }
+    // }
+    // levelBeans+="]"
+    //
+    // if (salary != "" && location != null && companyLevel != null && companyQuality != null &&jobType != "") {
+    //     var submit_data = {
+    //         "phone": phone,
+    //         "salary": salary,
+    //         "lowSalary":lowSalary,
+    //         "highSalary": highSalary,
+    //         "expectLocationBeans": locationBeans,
+    //         "expectCompanyQualityBeans": qualityBeans,
+    //         "expectCompanyLevelBeans": levelBeans,
+    //         "jobType": jobType,
+    //         "description": description
+    //     }
+    //     var url = "/user/expectation";
 
-    var qualityBeans = "["
-    for(var i = 0; i < qualityArr.length; i++) {
-        if (i == 0) {
-            qualityBeans += "{ \"phone\":\""+ phone+"\",\"expectCompanyQuality\":\""+qualityArr[i]+"\"}";
-        } else {
-            qualityBeans += ",{ \"phone\":\""+ phone+"\",\"expectCompanyQuality\":\""+qualityArr[i]+"\"}";
-        }
-    }
-    qualityBeans+="]"
-
-    var levelBeans = "["
-    for(var i = 0; i < levelArr.length; i++) {
-        if (i == 0) {
-            levelBeans += "{ \"phone\":\""+ phone+"\",\"expectCompanyLevel\":\""+levelArr[i]+"\"}";
-        } else {
-            levelBeans += ",{ \"phone\":\""+ phone+"\",\"expectCompanyLevel\":\""+levelArr[i]+"\"}";
-        }
-    }
-    levelBeans+="]"
-
-    if (salary != "" && location != null && companyLevel != null && companyQuality != null &&jobType != "") {
-        var submit_data = {
-            "phone": phone,
-            "salary": salary,
-            "lowSalary":lowSalary,
-            "highSalary": highSalary,
-            "expectLocationBeans": locationBeans,
-            "expectCompanyQualityBeans": qualityBeans,
-            "expectCompanyLevelBeans": levelBeans,
-            "jobType": jobType,
-            "description": description
-        }
-        var url = "/user/expectation";
-
-        $.ajax({
-            type:'post',
-            url:url,
-            contentType:'application/json;charset=utf-8',
-            data: JSON.stringify(submit_data),
-            success:function (data) {
-                if (data.result == true) {
-                    alert("求职意向输入成功！")
-                    window.location.href = "home.html";
-                } else {
-                    alert(data.message);
-                }
-            }
-        });
-    } else {
-        alert("请将必填信息填写完整！");
-        return false;
-    }
+    alert("求职意向输入成功！")
+    window.location.href = "home.html";
+    //     $.ajax({
+    //         type:'post',
+    //         url:url,
+    //         contentType:'application/json;charset=utf-8',
+    //         data: JSON.stringify(submit_data),
+    //         success:function (data) {
+    //             if (data.result == true) {
+    //                 alert("求职意向输入成功！")
+    //                 window.location.href = "home.html";
+    //             } else {
+    //                 alert(data.message);
+    //             }
+    //         }
+    //     });
+    // } else {
+    //     alert("请将必填信息填写完整！");
+    //     return false;
+    // }
 
 }
 
