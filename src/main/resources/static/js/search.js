@@ -167,14 +167,15 @@ function showCareerItems(careerItems, flag) {
     else
         type = "1";
         var addItems ='<div class="result_title">\n' +
-            '                <span class="t1">公司名称</span>\n' +
-            '                <span class="t2">职位</span>\n' +
-            '                <span class="t3">地点</span>\n' +
-            '                <span class="t4">薪酬</span>\n' +
-            '                <span class="t5">匹配度</span>\n' +
-            '                <span class="t6">收藏</span>\n' +
-            '                <span class="t7">不喜欢</span>\n' +
-            '            </div>';
+            '                <span class="t1" style="width: 100px;">公司名称</span>\n' +
+            '                <span class="t2" style="width: 180px;">职位</span>\n' +
+            '                <span class="t3" style="width: 100px;">地点</span>\n' +
+            '                <span class="t4" style="width: 140px;">薪酬</span>\n' +
+            '                <span class="t5" style="width: 80px;">匹配度</span>\n' +
+            '                <span class="t6" style="width: 60px;">收藏</span>\n' +
+            '                <span class="t7" style="width: 60px;">不喜欢</span>\n' +
+            '            </div>'
+
         addItems +='<div class="result_content">';
          addItems += '<div style="display: block" ">';
         addItems += '<input type="hidden" value="'+ type+'" id="searchType">'
@@ -205,12 +206,12 @@ function showCareerItems(careerItems, flag) {
                 addItems += '<div class="result_content_item1" onclick="getdetail('+jobId+')">\n'
 
             addItems += '                    <input class="t0" value="'+jobId+'" type="hidden">\n' +
-                '                    <span class="t1">'+companyName+'</span>\n' +
-                '                    <span class="t2">'+jobName+'</span>\n' +
-                '                    <span class="t3">'+joblocation+'</span>\n' +
-                '                    <span class="t4">'+salary+'</span>\n' +
-                '                    <span class="t5">'+matchDegree+'</span>\n' +
-                '                    <button type="button" class="like t6" onclick="like(this,'+jobId+')"><i class="glyphicon glyphicon-heart" ></i></button>\n' +
+                '                    <span class="t1" style="width: 110px;">'+companyName+'</span>\n' +
+                '                    <span class="t2" style="width: 170px;">'+jobName+'</span>\n' +
+                '                    <span class="t3" style="width: 110px;">'+joblocation+'</span>\n' +
+                '                    <span class="t4" style="width: 150px;">'+salary+'</span>\n' +
+                '                    <span class="t5" style="width: 60px;">'+matchDegree+'</span>\n' +
+                '                    <button type="button" class="like t6" style="width: 50px;" onclick="like(this,'+jobId+')"><i class="glyphicon glyphicon-heart" ></i></button>\n' +
                 '                    <button type="button" class="dislike t7" onclick="dislike(this,'+jobId+')"><i class="fa fa-frown-o fa-lg" ></i></button>\n' +
                 '                </div>';
         }
