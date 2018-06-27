@@ -307,7 +307,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="content-item show_project_item" style="margin-bottom: 20px">
+                <div class="content-item show_project_item"style="margin-bottom: 5px; background: rgba(255,255,255,0.2)">
                     <div  class="">
                         <div class="row input-row">
                             <div class="col-md-3 ">
@@ -333,7 +333,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="col-md-4">
                                 <div class="input-group">
-                                    <input class="input-show" type="text" readonly id="show_project_level" value="代码量10k-20k行">
+                                    <input class="input-show show_project_level" type="text" readonly  value="代码量10k-20k行">
                                 </div>
                             </div>
                         </div>
@@ -537,7 +537,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="content-item" id="show_expect" >
                     <div class="row content-item-title">
                         <span class="glyphicon glyphicon-road"></span>   求职意向
-                        <button type="button" class="modifyBtn" onclick=""><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>
+                        <div id="expect_icon_div">
+                            <button type="button" class="modifyBtn" onclick="click_expect_click1()"><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>
+                        </div>
                     </div>
                     <div>
                         <div class="row input-row">
@@ -582,7 +584,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4 style="margin-top: 5px; margin-bottom: 5px">公司性质:</h4>
                             </div>
                             <div class="col-md-4" style="text-align: left">
-                                <input class="input-show show_expect_quality" type="text" readonly  value="国企">
+                                <input class="input-show show_expect_quality" type="text" readonly  id="show_company_type" value="国企">
                             </div>
                             <div class="col-md-2 ">
                                 <h4 style="margin-top: 5px; margin-bottom: 5px">职位:</h4>
@@ -615,7 +617,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4 style="margin-top: -15px;">简要介绍:</h4>
                             </div>
                             <div class="col-md-9">
-                                <textarea style="float: left" cols="60%" readonly placeholder="希望能在江苏、上海找到满意的工作" class="input-show show_expect_desc"></textarea>
+                                <textarea style="float: left" cols="60%" readonly placeholder="希望能在江苏、上海找到满意的工作" id="show_other_info" class="input-show show_expect_desc"></textarea>
                             </div>
                         </div>
                     </div>

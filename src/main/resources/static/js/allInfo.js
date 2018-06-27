@@ -76,15 +76,46 @@ function click_basicInfo_2() {
 }
 
 function click_education_1() {
-    document.getElementById("education_icon_div").innerHTML = '<button type="button" class="modifyBtn" onclick="click_education_2()"><span class="glyphicon glyphicon-upload" style="font-size: 20px;"></span></button>'
-    
+    document.getElementById("education_icon_div").innerHTML = '<button type="button" class="modifyBtn" onclick="click_education_2()"><span class="glyphicon glyphicon-upload" style="font-size: 20px;"></span></button>';
+    document.getElementById("show_eduDegree").readOnly = false;
+    document.getElementById("show_school").readOnly = false;
+    document.getElementById("show_major").readOnly = false;
+    document.getElementById("show_fromTime").readOnly = false;
+    document.getElementById("show_toTime").readOnly = false;
 }
 
 function click_education_2() {
-    document.getElementById("education_icon_div").innerHTML = '<button type="button" class="modifyBtn" onclick="click_education_1()"><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>'
-
+    document.getElementById("education_icon_div").innerHTML = '<button type="button" class="modifyBtn" onclick="click_education_1()"><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>';
+    document.getElementById("show_eduDegree").readOnly = true;
+    document.getElementById("show_school").readOnly = true;
+    document.getElementById("show_major").readOnly = true;
+    document.getElementById("show_fromTime").readOnly = true;
+    document.getElementById("show_toTime").readOnly = true;
+    alert("修改成功");
 }
 
+function click_expect_click1() {
+    document.getElementById("expect_icon_div").innerHTML = '<button type="button" class="modifyBtn" onclick="click_expect_click2()"><span class="glyphicon glyphicon-upload" style="font-size: 20px;"></span></button>';
+    document.getElementById("show_expect_salary").readOnly = false;
+    document.getElementById("show_expect_lowsalary").readOnly = false;
+    document.getElementById("show_expect_highsalary").readOnly = false;
+    document.getElementById("show_expect_type").readOnly = false;
+    document.getElementById("show_company_type").readOnly = false;
+    document.getElementById("show_expect_position").readOnly = false;
+    document.getElementById("show_other_info").readOnly = false;
+}
+
+function click_expect_click2() {
+    document.getElementById("expect_icon_div").innerHTML = '<button type="button" class="modifyBtn" onclick="click_expect_click1()"><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>';
+    document.getElementById("show_expect_salary").readOnly = true;
+    document.getElementById("show_expect_lowsalary").readOnly = true;
+    document.getElementById("show_expect_highsalary").readOnly = true;
+    document.getElementById("show_expect_type").readOnly = true;
+    document.getElementById("show_company_type").readOnly = true;
+    document.getElementById("show_expect_position").readOnly = true;
+    document.getElementById("show_other_info").readOnly = true;
+    alert("修改成功");
+}
 
 
 
