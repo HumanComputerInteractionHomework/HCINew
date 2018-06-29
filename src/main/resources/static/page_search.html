@@ -35,9 +35,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- webfonts -->
     <!----font-Awesome----->
     <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
-    <link href="./css/multiple-select.css" rel="stylesheet"/>
     <!----font-Awesome----->
 
+
+    <link rel="stylesheet" href="css/bootstraphp.css">
+    <link rel="stylesheet" href="css/multiple-selecthp.css">
 
     <style>
         .label_hp{
@@ -75,6 +77,78 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
+<div class="container" style="position:absolute;left: 700px;top: 360px;z-index:3;">
+    <div class="form-group">
+        <select id="jobCity" multiple="multiple">
+            <optgroup label="热门城市">
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+                <option value="广州">广州</option>
+                <option value="深圳">深圳</option>
+                <option value="杭州">杭州</option>
+                <option value="天津">天津</option>
+                <option value="南京">南京</option>
+                <option value="武汉">武汉</option>
+                <option value="成都">成都</option>
+                <option value="西安">西安</option>
+                <option value="大连">大连</option>
+                <option value="苏州">苏州</option>
+                <option value="合肥">合肥</option>
+                <option value="厦门">厦门</option>
+                <option value="长沙">长沙</option>
+                <option value="重庆">重庆</option>
+            </optgroup>
+            <optgroup label="江苏省">
+                <option value="无锡">无锡</option>
+                <option value="徐州">徐州</option>
+                <option value="常州">常州</option>
+                <option value="南通">南通</option>
+                <option value="江苏省其他">其他</option>
+            </optgroup>
+            <optgroup label="浙江省">
+                <option value="宁波">宁波</option>
+                <option value="温州">温州</option>
+                <option value="嘉兴">嘉兴</option>
+                <option value="绍兴">绍兴</option>
+                <option value="浙江省其他">其他</option>
+            </optgroup>
+            <optgroup label="广东省">
+                <option value="珠海">珠海</option>
+                <option value="东莞">东莞</option>
+                <option value="佛山">佛山</option>
+                <option value="中山">中山</option>
+                <option value="广东省其他">其他</option>
+            </optgroup>
+            <optgroup label="山东省">
+                <option value="济南">济南</option>
+                <option value="青岛">青岛</option>
+                <option value="威海">威海</option>
+                <option value="烟台">烟台</option>
+                <option value="潍坊">潍坊</option>
+                <option value="山东省其他">其他</option>
+            </optgroup>
+            <optgroup label="其他">
+                <option value="">其他</option>
+            </optgroup>
+        </select>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- header -->
 <div class="header" style="padding-bottom:0;">
     <!-- container -->
@@ -212,65 +286,67 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
 
 
+
+
                 <!-- 城市 -->
                 <div class="form-group row_style" style="margin-top: -45px;left:360px;">
                     <label class="label_hp label_style" id="label_city" style="top:-8px;">工作城市</label>
 
-                    <div style="margin-left: 160px;margin-top:-50px;height: 50px;" class="col-mg-4">
-                        <select class="form-control multiple-groupSelect" multiple="multiple" style="width: 565px;"
-                                id="jobCity"  >
-                            <optgroup label="热门城市">
-                                <option value="北京">北京</option>
-                                <option value="上海">上海</option>
-                                <option value="广州">广州</option>
-                                <option value="深圳">深圳</option>
-                                <option value="杭州">杭州</option>
-                                <option value="天津">天津</option>
-                                <option value="南京">南京</option>
-                                <option value="武汉">武汉</option>
-                                <option value="成都">成都</option>
-                                <option value="西安">西安</option>
-                                <option value="大连">大连</option>
-                                <option value="苏州">苏州</option>
-                                <option value="合肥">合肥</option>
-                                <option value="厦门">厦门</option>
-                                <option value="长沙">长沙</option>
-                                <option value="重庆">重庆</option>
-                            </optgroup>
-                            <optgroup label="江苏省">
-                                <option value="无锡">无锡</option>
-                                <option value="徐州">徐州</option>
-                                <option value="常州">常州</option>
-                                <option value="南通">南通</option>
-                                <option value="江苏省其他">其他</option>
-                            </optgroup>
-                            <optgroup label="浙江省">
-                                <option value="宁波">宁波</option>
-                                <option value="温州">温州</option>
-                                <option value="嘉兴">嘉兴</option>
-                                <option value="绍兴">绍兴</option>
-                                <option value="浙江省其他">其他</option>
-                            </optgroup>
-                            <optgroup label="广东省">
-                                <option value="珠海">珠海</option>
-                                <option value="东莞">东莞</option>
-                                <option value="佛山">佛山</option>
-                                <option value="中山">中山</option>
-                                <option value="广东省其他">其他</option>
-                            </optgroup>
-                            <optgroup label="山东省">
-                                <option value="济南">济南</option>
-                                <option value="青岛">青岛</option>
-                                <option value="威海">威海</option>
-                                <option value="烟台">烟台</option>
-                                <option value="潍坊">潍坊</option>
-                                <option value="山东省其他">其他</option>
-                            </optgroup>
-                            <optgroup label="其他">
-                                <option value="">其他</option>
-                            </optgroup>
-                        </select>
-                    </div>
+                    <!--<div style="margin-left: 160px;margin-top:-50px;height: 50px;" class="col-mg-4">-->
+                    <!--<select class="form-control multiple-groupSelect" multiple="multiple" style="width: 565px;"-->
+                    <!--id="jobCity"  >-->
+                    <!--<optgroup label="热门城市">-->
+                    <!--<option value="北京">北京</option>-->
+                    <!--<option value="上海">上海</option>-->
+                    <!--<option value="广州">广州</option>-->
+                    <!--<option value="深圳">深圳</option>-->
+                    <!--<option value="杭州">杭州</option>-->
+                    <!--<option value="天津">天津</option>-->
+                    <!--<option value="南京">南京</option>-->
+                    <!--<option value="武汉">武汉</option>-->
+                    <!--<option value="成都">成都</option>-->
+                    <!--<option value="西安">西安</option>-->
+                    <!--<option value="大连">大连</option>-->
+                    <!--<option value="苏州">苏州</option>-->
+                    <!--<option value="合肥">合肥</option>-->
+                    <!--<option value="厦门">厦门</option>-->
+                    <!--<option value="长沙">长沙</option>-->
+                    <!--<option value="重庆">重庆</option>-->
+                    <!--</optgroup>-->
+                    <!--<optgroup label="江苏省">-->
+                    <!--<option value="无锡">无锡</option>-->
+                    <!--<option value="徐州">徐州</option>-->
+                    <!--<option value="常州">常州</option>-->
+                    <!--<option value="南通">南通</option>-->
+                    <!--<option value="江苏省其他">其他</option>-->
+                    <!--</optgroup>-->
+                    <!--<optgroup label="浙江省">-->
+                    <!--<option value="宁波">宁波</option>-->
+                    <!--<option value="温州">温州</option>-->
+                    <!--<option value="嘉兴">嘉兴</option>-->
+                    <!--<option value="绍兴">绍兴</option>-->
+                    <!--<option value="浙江省其他">其他</option>-->
+                    <!--</optgroup>-->
+                    <!--<optgroup label="广东省">-->
+                    <!--<option value="珠海">珠海</option>-->
+                    <!--<option value="东莞">东莞</option>-->
+                    <!--<option value="佛山">佛山</option>-->
+                    <!--<option value="中山">中山</option>-->
+                    <!--<option value="广东省其他">其他</option>-->
+                    <!--</optgroup>-->
+                    <!--<optgroup label="山东省">-->
+                    <!--<option value="济南">济南</option>-->
+                    <!--<option value="青岛">青岛</option>-->
+                    <!--<option value="威海">威海</option>-->
+                    <!--<option value="烟台">烟台</option>-->
+                    <!--<option value="潍坊">潍坊</option>-->
+                    <!--<option value="山东省其他">其他</option>-->
+                    <!--</optgroup>-->
+                    <!--<optgroup label="其他">-->
+                    <!--<option value="">其他</option>-->
+                    <!--</optgroup>-->
+                    <!--</select>-->
+                    <!--</div>-->
                 </div>
 
 
@@ -636,5 +712,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     })
 </script>
 
+
+
+
+
+<script src="js/jqueryhp.min.js"></script>
+<script src="js/multiple-selecthp.js"></script>
+<script>
+    $(function() {
+        $('#jobCity').change(function() {
+            console.log($(this).val());
+        }).multipleSelect({
+            width: '100%'
+        });
+    });
+</script>
 
 </html>
