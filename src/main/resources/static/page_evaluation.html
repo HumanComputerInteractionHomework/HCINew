@@ -81,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="detail_block">
             <div class="row">
-                <form action="" method="post" >
+                <div>
                     <div class="row input-row">
                         <div class="col-md-2 ">
                             <h4 style="margin-top: 5px; margin-bottom: 5px">面试难度:</h4>
@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                         <div class="col-md-10">
                             <div class="input-group">
-                                <textarea  style="border-radius: 2px;width: 500px; height: 250px;" placeholder="在此输入你的评价～" id="evaluation" ></textarea>
+                                <textarea  style="border-radius: 2px;width: 500px; height: 250px;" placeholder="在此输入你的评价～" id="evaluation"  required></textarea>
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <input type="submit" class="btn btn-primary"value="取消" onclick="cancel()"/>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -197,10 +197,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </body>
 <script type="text/javascript">
     $(function() {
-        $(".star-rating").raty({ width: 150,
+        $(".star-rating").raty({
+            width: 150,
             size     : 24,
             starOff  : './raty/lib/img/star-off-big.png',
-            starOn   : './raty/lib/img/star-on-big.png'
+            starOn   : './raty/lib/img/star-on-big.png',
+            score:5
         });
         
     });
@@ -221,23 +223,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             alert("请先登录！");
             window.location.href = "page_signin.html";
         } else {
-            console.log(window.location.href);
- //           window.location.href = "page_detailInfo.html?job="+jobid;
-//            var url = "/job/scan";
-//            var json_data = {"phone": phone,
-//                "jobId": jobid};
-//            $.ajax({
-//                url:url,
-//                contentType:'application/json;charset=utf-8',
-//                data: JSON.stringify(json_data),
-//                success:function (data) {
-//                    console.log(window.location.href);
-//                    window.location.href = "page_detailInfo.html?job="+jobid;
-//                },
-//                error:function(data){
-//                    console.log("failure~~");
-//                }
-//            });
+//            console.log(window.location.href);
+            window.location.href = "page_detailInfo.html?job="+jobid;
+            var url = "/job/scan";
+            var json_data = {"phone": phone,
+                "jobId": jobid};
+            $.ajax({
+                url:url,
+                contentType:'application/json;charset=utf-8',
+                data: JSON.stringify(json_data),
+                success:function (data) {
+                    console.log(window.location.href);
+                    window.location.href = "page_detailInfo.html?job="+jobid;
+                },
+                error:function(data){
+                    console.log("failure~~");
+                }
+            });
 
         }
     }
