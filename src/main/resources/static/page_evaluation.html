@@ -221,20 +221,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             alert("请先登录！");
             window.location.href = "page_signin.html";
         } else {
-            var url = "/job/scan";
-            var json_data = {"phone": phone,
-                "jobId": jobid};
-            $.ajax({
-                type:'post',
-                url:url,
-                contentType:'application/json;charset=utf-8',
-                data: JSON.stringify(json_data),
-                success:function (data) {
-                    // do nothing
-                }
-            });
+            console.log(window.location.href);
+ //           window.location.href = "page_detailInfo.html?job="+jobid;
+//            var url = "/job/scan";
+//            var json_data = {"phone": phone,
+//                "jobId": jobid};
+//            $.ajax({
+//                url:url,
+//                contentType:'application/json;charset=utf-8',
+//                data: JSON.stringify(json_data),
+//                success:function (data) {
+//                    console.log(window.location.href);
+//                    window.location.href = "page_detailInfo.html?job="+jobid;
+//                },
+//                error:function(data){
+//                    console.log("failure~~");
+//                }
+//            });
 
-            window.location.href = "page_detailInfo.html?job="+jobid;
         }
     }
 </script>

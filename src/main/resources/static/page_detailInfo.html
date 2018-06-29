@@ -405,7 +405,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     //    var element=document.getElementById("btn_isLike");
     //    element.addEventListener("click",collected);
     function fakeEvaluation(){
-        window.location.href="page_evaluation.html?job="+jobid;
+        var phone = getCookie("phone");
+        if(phone =="") {
+            alert("请先登录！");
+            window.location.href = "page_signin.html";
+        } else {
+            var url = "/job/scan";
+            var json_data = {"phone": phone,
+                "jobId": jobid};
+            $.ajax({
+                type:'get',
+                url:url,
+                contentType:'application/json;charset=utf-8',
+                data: JSON.stringify(json_data),
+                success:function (data) {
+                    // do nothing
+                }
+            });
+
+            window.location.href = "page_evaluation.html?job="+encodeURI(jobid);
+        }
     }
 </script>
 
