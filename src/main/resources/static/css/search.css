@@ -1,9 +1,10 @@
 h4, h5, h6,
 h1, h2, h3 {margin-top: 0;}
+ul, ol {margin: 0;}
 p {margin: 0;}
 html, body{
     font-family: 'Slabo 27px', serif;
-    font-size: 110%;
+    font-size: 100%;
     background: #FFf;
 }
 body a{
@@ -24,7 +25,7 @@ body a{
 }
 .logo {
     float: left;
-    margin-top: -30px;
+    margin-top: -10px;
 }
 /* start h_menu */
 .h_menu4{
@@ -168,6 +169,7 @@ body a{
     width: 15px;
     height: 15px;
 }
+
 
 /* -- sign-in banner -- */
 .fullscreen {
