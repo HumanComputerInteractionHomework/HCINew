@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container" >
         <div class="row" >
             <div class="col-md-3" style="padding-right: 50px">
-                <div class="nav_left " >
+                <div class="nav_left" >
                     <div class="top_wrap" id="infoTitle">
                         <h2>个人信息</h2>
                         <img src="images/man2.png" style="margin-bottom: 10px;padding-left: 5px">
@@ -84,20 +84,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span class="glyphicon glyphicon-envelope"><input  class="input-show" id="show_mail" value="piaoH@gmail.com" readonly></span>
                     </div>
                     <div class="nav_body" id="nav_body_index">
-                        <a href="#show_baseInfo" id="base_index" class="nav_item_active" style="background: #FFFFFF"><span class="glyphicon glyphicon-user"></span>   基本信息<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
-                        <a href="#show_eduInfo" id="edu_index" class="nav_item" style="background: #FFFFFF"><span class="glyphicon glyphicon-book"></span>   教育经历<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
-                        <a href="#show_project" id="projecy_index" class="nav_item" style="background: #FFFFFF"><span class="glyphicon glyphicon-briefcase"></span>   项目经验<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
-                        <a href="#show_career" id="career_index" class="nav_item" style="background: #FFFFFF"><span class="glyphicon glyphicon-list"></span>   工作经验<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
-                        <a href="#show_skill" id="skill_index" class="nav_item" style="background: #FFFFFF"><span class="glyphicon glyphicon-signal"></span>   技能特长<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
-                        <a href="#show_expect" id="expect_index" class="nav_item" style="background: #FFFFFF"><span class="glyphicon glyphicon-road"></span>   求职意向<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
+                        <a href="#show_baseInfo" id="base_index" class="nav_item_active" style="background: rgba(255,255,255,0.2)"><span class="glyphicon glyphicon-user"></span>   基本信息<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
+                        <a href="#show_eduInfo" id="edu_index" class="nav_item" style="background: rgba(255,255,255,0.2)"><span class="glyphicon glyphicon-book"></span>   教育经历<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
+                        <a href="#show_project" id="projecy_index" class="nav_item" style="background: rgba(255,255,255,0.2)"><span class="glyphicon glyphicon-briefcase"></span>   项目经验<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
+                        <a href="#show_career" id="career_index" class="nav_item" style="background: rgba(255,255,255,0.2)"><span class="glyphicon glyphicon-list"></span>   工作经验<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
+                        <a href="#show_skill" id="skill_index" class="nav_item" style="background: rgba(255,255,255,0.2)"><span class="glyphicon glyphicon-signal"></span>   技能特长<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
+                        <a href="#show_expect" id="expect_index" class="nav_item" style="background: rgba(255,255,255,0.2)"><span class="glyphicon glyphicon-road"></span>   求职意向<span class="glyphicon glyphicon-check"style="float: right;padding-right: 16px;padding-top: 13px;color: #3eb0f7"></span></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-9 content" style="background: #FFFFFF">
-                <div class="content-item" id="show_baseInfo" style="margin-bottom: 20px; background: #FFFFFF">
+            <div class="col-md-9 content" style="background: rgba(255,255,255,0.2)">
+                <div class="content-item" id="show_baseInfo" style="margin-bottom: 20px; background: rgba(255,255,255,0.2)">
                     <div class="row content-item-title">
                         <span class="glyphicon glyphicon-user"></span>   基本信息
-                        <button type="button" class="modifyBtn" onclick=""><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>
+                        <div id="basicInfo_icon_div">
+                        <button type="button" class="modifyBtn" onclick="click_basicInfo_1()"><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>
+                        </div>
                     </div>
                     <div>
                         <div class="row input-row">
@@ -191,10 +193,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="content-item" id="show_eduInfo" style="margin-bottom: 20px; background: #FFFFFF">
+                <div class="content-item" id="show_eduInfo" style="margin-bottom: 20px; background: rgba(255,255,255,0.2)">
                     <div class="row content-item-title">
                         <span class="glyphicon glyphicon-book"></span>   教育经历
-                        <button type="button" class="modifyBtn" onclick=""><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>
+                        <div id="education_icon_div">
+                            <button type="button" class="modifyBtn" onclick="click_education_1()"><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>
+                        </div>
                     </div>
                     <div class="row input-row">
                         <div class="col-md-3">
@@ -251,7 +255,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="glyphicon glyphicon-briefcase"></span>   项目经历
                     <button type="button" class="modifyBtn addBtn" onclick=""><span class="glyphicon glyphicon-plus"></span></button>
                 </div>
-                <div class="content-item show_project_item"style="margin-bottom: 5px; background: #FFFFFF">
+                <div class="content-item show_project_item"style="margin-bottom: 5px; background: rgba(255,255,255,0.2)">
                     <div  class="">
                         <div class="row input-row">
                             <div class="col-md-3 ">
@@ -303,7 +307,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="content-item show_project_item" style="margin-bottom: 20px">
+                <div class="content-item show_project_item"style="margin-bottom: 5px; background: rgba(255,255,255,0.2)">
                     <div  class="">
                         <div class="row input-row">
                             <div class="col-md-3 ">
@@ -329,7 +333,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="col-md-4">
                                 <div class="input-group">
-                                    <input class="input-show" type="text" readonly id="show_project_level" value="代码量10k-20k行">
+                                    <input class="input-show show_project_level" type="text" readonly  value="代码量10k-20k行">
                                 </div>
                             </div>
                         </div>
@@ -529,10 +533,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
+
                 <div class="content-item" id="show_expect" >
                     <div class="row content-item-title">
                         <span class="glyphicon glyphicon-road"></span>   求职意向
-                        <button type="button" class="modifyBtn" onclick=""><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>
+                        <div id="expect_icon_div">
+                            <button type="button" class="modifyBtn" onclick="click_expect_click1()"><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span></button>
+                        </div>
                     </div>
                     <div>
                         <div class="row input-row">
@@ -577,7 +584,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4 style="margin-top: 5px; margin-bottom: 5px">公司性质:</h4>
                             </div>
                             <div class="col-md-4" style="text-align: left">
-                                <input class="input-show show_expect_quality" type="text" readonly  value="国企">
+                                <input class="input-show show_expect_quality" type="text" readonly  id="show_company_type" value="国企">
                             </div>
                             <div class="col-md-2 ">
                                 <h4 style="margin-top: 5px; margin-bottom: 5px">职位:</h4>
@@ -610,7 +617,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4 style="margin-top: -15px;">简要介绍:</h4>
                             </div>
                             <div class="col-md-9">
-                                <textarea style="float: left" cols="60%" readonly placeholder="希望能在江苏、上海找到满意的工作" class="input-show show_expect_desc"></textarea>
+                                <textarea style="float: left" cols="60%" readonly placeholder="希望能在江苏、上海找到满意的工作" id="show_other_info" class="input-show show_expect_desc"></textarea>
                             </div>
                         </div>
                     </div>
