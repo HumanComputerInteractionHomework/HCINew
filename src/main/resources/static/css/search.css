@@ -95,14 +95,17 @@ body a{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
+    font-size:1.2em;
 }
 .nav > li > a{
     color:#777777;
+    font-size: 19px;
 }
 .nav > li.hover > ul {
     left:15px;
     top:38px;
 }
+
 .nav li li.hover ul {
     left: 100%;
     -webkit-transition: background .2s linear;

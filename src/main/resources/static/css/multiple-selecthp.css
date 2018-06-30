@@ -6,11 +6,12 @@
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    width: 180px;
+
     font-family: '微软雅黑 Light', serif;
     font-weight:300;
     font-size: 16px;
     color: grey;
+    width: 180px;
 }
 
 .ms-choice {
@@ -67,11 +68,13 @@
     right: 0;
     width: 20px;
     height: 25px;
+    left:160px;
     background: url('../images/multiple-select.png') left top no-repeat;
 }
 
 .ms-choice > div.open {
     background: url('../images/multiple-select.png') right top no-repeat;
+    left: 160px;
 }
 
 .ms-drop {
