@@ -8,6 +8,39 @@ function setPageCount( sum) {
         page_icon(1,pageCount,0);
     }
 }
+
+
+
+
+function lastPageClicked(){
+    if(pageCount > 5){
+        var pageNum = parseInt($("#pageGro li.on").html());//获取当前页
+        pageUp(pageNum,pageCount);
+    }else{
+        var index = $("#pageGro ul li.on").index();//获取当前页
+        if(index > 0){
+            $("#pageGro li").removeClass("on");//清除所有选中
+            $("#pageGro ul li").eq(index-1).addClass("on");//选中上一页
+        }
+    }
+}
+
+function nextPageClicked() {
+    if(pageCount > 5){
+        var pageNum = parseInt($("#pageGro li.on").html());//获取当前页
+        pageDown(pageNum,pageCount);
+    }else{
+
+        var index = $("#pageGro ul li.on").index();//获取当前页
+        if(index+1 < pageCount){
+            $("#pageGro li").removeClass("on");//清除所有选中
+            $("#pageGro ul li").eq(index+1).addClass("on");//选中上一页
+        }
+    }
+}
+
+
+
 $(function (){
 	//根据总页数判断，如果小于5页，则显示所有页数，如果大于5页，则显示5页。根据当前点击的页数生成
 	
@@ -31,33 +64,35 @@ $(function (){
 	});
 	
 	//点击上一页触发
-	$("#pageGro .pageUp").click(function(){
-		if(pageCount > 5){
-			var pageNum = parseInt($("#pageGro li.on").html());//获取当前页
-			pageUp(pageNum,pageCount);
-		}else{
-			var index = $("#pageGro ul li.on").index();//获取当前页
-			if(index > 0){
-				$("#pageGro li").removeClass("on");//清除所有选中
-				$("#pageGro ul li").eq(index-1).addClass("on");//选中上一页
-			}
-		}
-	});
+	// $("#pageGro .pageUp").click(function(){
+		// alert("11111");
+		// if(pageCount > 5){
+		// 	var pageNum = parseInt($("#pageGro li.on").html());//获取当前页
+		// 	pageUp(pageNum,pageCount);
+		// }else{
+		// 	var index = $("#pageGro ul li.on").index();//获取当前页
+		// 	if(index > 0){
+		// 		$("#pageGro li").removeClass("on");//清除所有选中
+		// 		$("#pageGro ul li").eq(index-1).addClass("on");//选中上一页
+		// 	}
+		// }
+	// });
 	
 	//点击下一页触发
-	$("#pageGro .pageDown").click(function(){
-		if(pageCount > 5){
-			var pageNum = parseInt($("#pageGro li.on").html());//获取当前页
-			pageDown(pageNum,pageCount);
-		}else{
-
-			var index = $("#pageGro ul li.on").index();//获取当前页
-			if(index+1 < pageCount){
-				$("#pageGro li").removeClass("on");//清除所有选中
-				$("#pageGro ul li").eq(index+1).addClass("on");//选中上一页
-			}
-		}
-	});
+	// $("#pageGro .pageDown").onclick(function(){
+		// alert("66666");
+		// if(pageCount > 5){
+		// 	var pageNum = parseInt($("#pageGro li.on").html());//获取当前页
+		// 	pageDown(pageNum,pageCount);
+		// }else{
+        //
+		// 	var index = $("#pageGro ul li.on").index();//获取当前页
+		// 	if(index+1 < pageCount){
+		// 		$("#pageGro li").removeClass("on");//清除所有选中
+		// 		$("#pageGro ul li").eq(index+1).addClass("on");//选中上一页
+		// 	}
+		// }
+	// });
 });
 
 
@@ -154,3 +189,4 @@ function pageDown(pageNum,pageCount){
 	else
 		allMatchSearch(pageNum + 1)
 }
+

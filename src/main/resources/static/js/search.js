@@ -1,9 +1,7 @@
 
 var pp = 1;
+var detail = 0;
 function fuzzySearchRequest(page) {
-
-    alert("hihio");
-
     var phone = getCookie("phone");
     if(phone =="") {
         alert("请先登录！");
@@ -204,16 +202,16 @@ function showCareerItems(careerItems, flag) {
             }
             if (j%2 == 0)
                 addItems  += '<div class="result_content_item0" onclick="getdetail('+jobId+')">\n'
-             else
+            else
                 addItems += '<div class="result_content_item1" onclick="getdetail('+jobId+')">\n'
 
             addItems += '                    <input class="t0" value="'+jobId+'" type="hidden">\n' +
-                '                    <span class="t1" style="width: 110px;">'+companyName+'</span>\n' +
-                '                    <span class="t2" style="width: 170px;">'+jobName+'</span>\n' +
-                '                    <span class="t3" style="width: 110px;">'+joblocation+'</span>\n' +
-                '                    <span class="t4" style="width: 150px;">'+salary+'</span>\n' +
-                '                    <span class="t5" style="width: 60px;">'+matchDegree+'</span>\n' +
-                '                    <button type="button" class="like t6" style="width: 50px;" onclick="like(this,'+jobId+')"><i class="glyphicon glyphicon-heart" ></i></button>\n' +
+                '                    <span class="t1">'+companyName+'</span>\n' +
+                '                    <span class="t2">'+jobName+'</span>\n' +
+                '                    <span class="t3">'+joblocation+'</span>\n' +
+                '                    <span class="t4">'+salary+'</span>\n' +
+                '                    <span class="t5">'+matchDegree+'</span>\n' +
+                '                    <button type="button" class="like t6" onclick="like(this,'+jobId+')"><i class="fa fa-bookmark-o fa-lg" ></i></button>\n' +
                 '                    <button type="button" class="dislike t7" onclick="dislike(this,'+jobId+')"><i class="fa fa-frown-o fa-lg" ></i></button>\n' +
                 '                </div>';
         }
@@ -280,18 +278,18 @@ function showConlectionItems(careerItems) {
         var matchDegree = item.matchDegree;
 
         if (j%2 == 0)
-            addItems  += '<div class="result_content_item0" onclick="getdetail('+jobId+')">\n'
+            addItems  += '<div class="result_content_item0" >\n'
         else
-            addItems += '<div class="result_content_item1" onclick="getdetail('+jobId+')">\n'
+            addItems += '<div class="result_content_item1" >\n'
 
         addItems += '                    <input class="t0" value="'+jobId+'" type="hidden">\n' +
-            '                    <span class="t1">'+companyName+'</span>\n' +
+            '                    <span onclick="getdetail('+jobId+')" class="t1">'+companyName+'</span>\n' +
             '                    <span class="t2">'+jobName+'</span>\n' +
             '                    <span class="t3">'+joblocation+'</span>\n' +
             '                    <span class="t4">'+salary+'</span>\n' +
             '                    <span class="t5">'+matchDegree+'</span>\n' +
-            '<button type="button" class="like t6" onclick="competition(this,'+jobId+')"><i class="glyphicon glyphicon-heart" ></i></button>\n' +
-            '                <button type="button" class="dislike t7" onclick="dislike(this,'+jobId+')"><i class="fa fa-frown-o fa-lg" ></i></button>'+
+            '                    <button type="button" class="like t6" onclick="like(this,'+jobId+')"><i class="fa fa-bookmark-o fa-lg" ></i></button>\n' +
+            '                    <button type="button" class="dislike t7" onclick="dislike(this,'+jobId+')"><i class="fa fa-frown-o fa-lg" ></i></button>\n' +
             '                </div>';
     }
     addItems += '</div>';
@@ -309,6 +307,7 @@ function showBottomBtn(curr, size, total) {
 }
 
 function like(that, id) {
+    detail = 1;
     var phone = getCookie("phone");
     if(phone =="") {
         alert("请先登录！");
@@ -355,6 +354,7 @@ function like(that, id) {
 }
 
 function dislike(that, id) {
+    detail = 2;
     var phone = getCookie("phone");
     if(phone =="") {
         alert("请先登录！");
@@ -378,6 +378,10 @@ function dislike(that, id) {
 }
 
 function getdetail(jobid) {
+    if(detail == 1||detail == 2){
+        detail = 0;
+        return;
+    }
     var phone = getCookie("phone");
     if(phone =="") {
         alert("请先登录！");

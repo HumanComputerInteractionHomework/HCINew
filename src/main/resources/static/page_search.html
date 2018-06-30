@@ -29,6 +29,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!----font-Awesome----->
 
 
+    <link href="css/pageGroup.css" rel="stylesheet"/>
+
+
 
     <style>
         .label_hp{
@@ -305,7 +308,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="t3" style="width: 110px;">北京-朝阳区</span>
                     <span class="t4" style="width: 150px;">2-4k/月</span>
                     <span class="t5" style="width: 60px;">1.00</span>
-                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+                    <button type="button" class="like t6" style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
                     <!--<button type="button" class="like t6">-->
                     <!--<div class="heart-red">-->
                     <!--</div>-->
@@ -396,31 +399,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
 
 
-            <!--<div id="pageGro" class="cb" style="width: 400px;">-->
-                <!--<div class="pageUp">上一页</div>-->
-                <!--<div class="pageList" >-->
-                    <!--<ul style="list-style:none;float: left;margin:0;padding:0;">-->
-                        <!--<li>1</li>-->
-                        <!--<li>2</li>-->
-                        <!--<li>3</li>-->
-                        <!--<li>4</li>-->
-                        <!--<li>5</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-                <!--<div class="pageDown">下一页</div>-->
-                <!--<div style="padding-top: 2px"><span id="pageId" class="pageButtonInfo" style="margin-top: 0px;list-style:none">第1页/共5页</span></div>-->
-            <!--</div>-->
 
-            <p class="text-center" style="margin-top: 5px;margin-bottom: 50px">
-                <button class="page-btn disabled" type="button" style="background: none;border:none;" disabled="disabled" onclick="lastPage()">上一页</button>
-                <button class="page-btn page-btn-active" type="button" style="background: none;border:none;" disabled="disabled" onclick="toPage(1)">1</button>
-                <button class="page-btn " type="button" style="background: none;border:none;"  onclick="toPage(2)">2</button>
-                <button class="page-btn " type="button" style="background: none;border:none;"  onclick="toPage(2)">3</button>
-                <button class="page-btn " type="button" style="background: none;border:none;"  onclick="toPage(2)">4</button>
-                <button class="page-btn" type="button" style="background: none;border:none;"  onclick="nextPage()">下一页</button>
-                <span id="search_currentPage" style="color: #808080">第1页 </span>
-                <span id="search_sumPage" style="color: #808080">共4页</span>
-            </p>
+
+            <script src="js/pageGroup.js"></script>
+
+            <div id="pageGro" class="cb" style="width: 400px;">
+                <div class="pageUp" onclick="lastPageClicked()">上一页</div>
+                <div class="pageList" >
+                    <ul style="list-style:none;float: left;margin:0;padding:0;">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </div>
+                <div class="pageDown" onclick="nextPageClicked()">下一页</div>
+                <div style="padding-top: 2px"><span id="pageId" class="pageButtonInfo" style="margin-top: 0px;list-style:none">第1页/共5页</span></div>
+            </div>
+
+
         </div>
         <!-- 结果结束 -->
 
@@ -444,23 +442,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 </div>
             </div>
-
-            <!-- 暂时先不显示footer -->
-            <!--<div id="baseline" style="width: 300px;"></div>-->
-            <!--<div id="pageGro" class="cb" style="width: 300px;">-->
-            <!--<div class="pageUp">上一页</div>-->
-            <!--<div class="pageList" >-->
-            <!--<ul style="list-style:none;float: left;margin:0;padding:0;">-->
-            <!--<li>1</li>-->
-            <!--<li>2</li>-->
-            <!--<li>3</li>-->
-            <!--<li>4</li>-->
-            <!--<li>5</li>-->
-            <!--</ul>-->
-            <!--</div>-->
-            <!--<div class="pageDown">下一页</div>-->
-            <!--<div style="padding-top: 2px"><span id="pageId" class="pageButtonInfo" style="margin-top: 0px;list-style:none">第1页/共5页</span></div>-->
-            <!--</div>-->
 
         </div>
         <!-- 热门搜索结束-->
@@ -607,7 +588,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <script>
     $(".like").click(function (e) {
-        e.stopPropagation()
+        e.stopPropagation();
     });
 
     $(".dislike").click(function (e) {
@@ -629,6 +610,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             width: '100%'
         });
     });
+
+
+
 </script>
 
 </html>
