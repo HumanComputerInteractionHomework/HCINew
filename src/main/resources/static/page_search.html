@@ -15,31 +15,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="./js/multiple-select.js" type="text/javascript"></script>
     <script src="js/user.js" type="text/javascript"></script>
     <script src="js/search.js" type="text/javascript"></script>
-    <script src="js/detailInfo.js" type="text/javascript"></script>
-    <script type="text/javascript" src = "js/echarts.min.js"></script>
-    <script type="text/javascript" src = "js/echarts-wordcloud.min.js"></script>
     <script src="js/jquery.min.js"></script>
-    <!-- 底栏分页按钮 -->
-    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/pageGroup.js"></script>
-    <!-- 底栏分页按钮 -->
-    <link rel="stylesheet" type="text/css" href="css/base.css"/>
-    <link rel="stylesheet" type="text/css" href="css/pageGroup.css"/>
     <!-- Custom Theme files -->
-
-    <!-- 为了防止冲突，不用main.css,用search.css -->
+    <link href="css/main.css" rel='stylesheet' type='text/css' />
     <link href="css/search.css" rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
-    <!--<link rel="stylesheet" type="text/css" href="css/zzsc.css">-->
     <link rel="stylesheet" href="css/dcalendar.picker.css"/>
     <!-- webfonts -->
     <!----font-Awesome----->
     <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <link href="css/multiple-selecthp.css" rel="stylesheet"/>
     <!----font-Awesome----->
 
 
-    <link rel="stylesheet" href="css/bootstraphp.css">
-    <link rel="stylesheet" href="css/multiple-selecthp.css">
 
     <style>
         .label_hp{
@@ -72,14 +61,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     </style>
 
-
-
-
-
 </head>
 <body>
 
-<div class="container" style="position:absolute;left: 605px;top: 387px;z-index:3;width: 180px;">
+<div class="container" style="position:absolute;left: 570px;top: 400px;z-index:3;width: 180px;">
     <div class="form-group">
         <select id="jobCity" multiple="multiple">
             <optgroup label="热门城市">
@@ -199,7 +184,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <input id="jobName" type="text" class="form-control" style="height:40px;width: 451px;"placeholder="职位名称">
                     <span class="input-group-btn" style="top:-30px;left:-10px;">
 						<button class="btn btn-default" onclick="fuzzySearchRequest(1)"  type="button" style="width:85px;height: 40px;line-height: 10px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
-                            <p style="text-align: center;margin-top:8px;">模糊搜索</p>
+                            <p style="text-align: center;margin-left: -25px;margin-top: 0px;">模糊搜索</p>
 						</button>
 					</span>
                 </div><!-- /input-group -->
@@ -279,68 +264,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!-- 城市 -->
                 <div class="form-group row_style" style="margin-top: -40px;left:360px;">
                     <label class="label_hp label_style" id="label_city" style="top:-8px;">工作城市</label>
-
-                    <!--<div style="margin-left: 160px;margin-top:-50px;height: 50px;" class="col-mg-4">-->
-                    <!--<select class="form-control multiple-groupSelect" multiple="multiple" style="width: 565px;"-->
-                    <!--id="jobCity"  >-->
-                    <!--<optgroup label="热门城市">-->
-                    <!--<option value="北京">北京</option>-->
-                    <!--<option value="上海">上海</option>-->
-                    <!--<option value="广州">广州</option>-->
-                    <!--<option value="深圳">深圳</option>-->
-                    <!--<option value="杭州">杭州</option>-->
-                    <!--<option value="天津">天津</option>-->
-                    <!--<option value="南京">南京</option>-->
-                    <!--<option value="武汉">武汉</option>-->
-                    <!--<option value="成都">成都</option>-->
-                    <!--<option value="西安">西安</option>-->
-                    <!--<option value="大连">大连</option>-->
-                    <!--<option value="苏州">苏州</option>-->
-                    <!--<option value="合肥">合肥</option>-->
-                    <!--<option value="厦门">厦门</option>-->
-                    <!--<option value="长沙">长沙</option>-->
-                    <!--<option value="重庆">重庆</option>-->
-                    <!--</optgroup>-->
-                    <!--<optgroup label="江苏省">-->
-                    <!--<option value="无锡">无锡</option>-->
-                    <!--<option value="徐州">徐州</option>-->
-                    <!--<option value="常州">常州</option>-->
-                    <!--<option value="南通">南通</option>-->
-                    <!--<option value="江苏省其他">其他</option>-->
-                    <!--</optgroup>-->
-                    <!--<optgroup label="浙江省">-->
-                    <!--<option value="宁波">宁波</option>-->
-                    <!--<option value="温州">温州</option>-->
-                    <!--<option value="嘉兴">嘉兴</option>-->
-                    <!--<option value="绍兴">绍兴</option>-->
-                    <!--<option value="浙江省其他">其他</option>-->
-                    <!--</optgroup>-->
-                    <!--<optgroup label="广东省">-->
-                    <!--<option value="珠海">珠海</option>-->
-                    <!--<option value="东莞">东莞</option>-->
-                    <!--<option value="佛山">佛山</option>-->
-                    <!--<option value="中山">中山</option>-->
-                    <!--<option value="广东省其他">其他</option>-->
-                    <!--</optgroup>-->
-                    <!--<optgroup label="山东省">-->
-                    <!--<option value="济南">济南</option>-->
-                    <!--<option value="青岛">青岛</option>-->
-                    <!--<option value="威海">威海</option>-->
-                    <!--<option value="烟台">烟台</option>-->
-                    <!--<option value="潍坊">潍坊</option>-->
-                    <!--<option value="山东省其他">其他</option>-->
-                    <!--</optgroup>-->
-                    <!--<optgroup label="其他">-->
-                    <!--<option value="">其他</option>-->
-                    <!--</optgroup>-->
-                    <!--</select>-->
-                    <!--</div>-->
                 </div>
 
 
                 <div class="form-group last">
                     <div class="input-group">
-                       <span class="input-group-btn" style="top: -30px;left: 755px;width: 100px;">
+                       <span class="input-group-btn" style="top: -35px;left: 755px;width: 100px;">
 						<button class="btn btn-default" onclick="allMatchSearch(1)"  type="button" style="width:85px;height: 40px;line-height: 10px;border-radius: 5px; background-color: #DEDEDE">
                             <p style="text-align: center;margin-left: -10px;margin-top:10px;">搜索</p>
 						</button>
@@ -350,7 +279,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
 
             </form>
-
 
         </div>
 
@@ -375,8 +303,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="t1" style="width: 110px;">京东集团总部</span>
                     <span class="t2" style="width: 170px;">大数据工程师</span>
                     <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
+                    <span class="t4" style="width: 150px;">2-4k/月</span>
+                    <span class="t5" style="width: 60px;">1.00</span>
                     <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
                     <!--<button type="button" class="like t6">-->
                     <!--<div class="heart-red">-->
@@ -385,116 +313,103 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
                 </div>
                 <div class="result_content_item1">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
+                    <span class="t1" style="width: 110px;">碧软信息科技公司</span>
+                    <span class="t2" style="width: 170px;">Java工程师</span>
+                    <span class="t3" style="width: 110px;">深圳</span>
+                    <span class="t4" style="width: 150px;">1.6-1.8w/月</span>
+                    <span class="t5" style="width: 60px;">1.00</span>
                     <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
 
                     <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
                 </div>
                 <div class="result_content_item0">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
+                    <span class="t1" style="width: 110px;">贯信信息科技公司</span>
+                    <span class="t2" style="width: 170px;">C++工程师</span>
+                    <span class="t3" style="width: 110px;">上海</span>
+                    <span class="t4" style="width: 150px;">1.5-2w/月</span>
+                    <span class="t5" style="width: 60px;">1.00</span>
                     <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
 
                     <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
                 </div>
                 <div class="result_content_item1">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
+                    <span class="t1" style="width: 110px;">中科信软件公司</span>
+                    <span class="t2" style="width: 170px;">华为HCIE工程师</span>
+                    <span class="t3" style="width: 110px;">北京</span>
+                    <span class="t4" style="width: 150px;">1.5-2w/月</span>
+                    <span class="t5" style="width: 60px;">1.00</span>
                     <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
 
                     <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
                 </div>
                 <div class="result_content_item0">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
+                    <span class="t1" style="width: 110px;">百丽集团体育总部</span>
+                    <span class="t2" style="width: 170px;">GIS数据工程师</span>
+                    <span class="t3" style="width: 110px;">上海-徐汇区</span>
+                    <span class="t4" style="width: 150px;">1.5-2.5w/月</span>
+                    <span class="t5" style="width: 60px;">1.00</span>
                     <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
 
                     <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
                 </div>
                 <div class="result_content_item1">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
+                    <span class="t1" style="width: 110px;">万得股份公司</span>
+                    <span class="t2" style="width: 170px;">资深Java工程师</span>
+                    <span class="t3" style="width: 110px;">南京-江宁区</span>
+                    <span class="t4" style="width: 150px;">1.5-2w/月</span>
+                    <span class="t5" style="width: 60px;">1.00</span>
                     <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
 
                     <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
                 </div>
                 <div class="result_content_item0">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
+                    <span class="t1" style="width: 110px;">懒人在线科技公司</span>
+                    <span class="t2" style="width: 170px;">软件开发工程师</span>
+                    <span class="t3" style="width: 110px;">深圳-南山区</span>
+                    <span class="t4" style="width: 150px;">2-3w/月</span>
+                    <span class="t5" style="width: 60px;">1.00</span>
                     <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
 
                     <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
                 </div>
                 <div class="result_content_item1">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
+                    <span class="t1" style="width: 110px;">悦岚数据服务公司</span>
+                    <span class="t2" style="width: 170px;">iOS开发工程师</span>
+                    <span class="t3" style="width: 110px;">南京-鼓楼区</span>
+                    <span class="t4" style="width: 150px;">1-2w/月</span>
+                    <span class="t5" style="width: 60px;">1.00</span>
                     <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
 
                     <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
                 </div>
                 <div class="result_content_item0">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t1" style="width: 110px;">上海银泰信息科技公司</span>
                     <span class="t2" style="width: 170px;">大数据工程师</span>
                     <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
+                    <span class="t4" style="width: 150px;">2-4w/月</span>
+                    <span class="t5" style="width: 60px;">1.00</span>
                     <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
 
                     <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
                 </div>
-                <div class="result_content_item1">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
-                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
 
-                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
-                </div>
-                <div class="result_content_item0">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
-                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
-
-                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
-                </div>
-                <div class="result_content_item1">
-                    <span class="t1" style="width: 110px;">京东集团总部</span>
-                    <span class="t2" style="width: 170px;">大数据工程师</span>
-                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
-                    <span class="t4" style="width: 150px;">20000-40000</span>
-                    <span class="t5" style="width: 60px;">95%</span>
-                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
-
-                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
-                </div>
             </div>
+
+
+            <!--<div id="pageGro" class="cb" style="width: 400px;">-->
+                <!--<div class="pageUp">上一页</div>-->
+                <!--<div class="pageList" >-->
+                    <!--<ul style="list-style:none;float: left;margin:0;padding:0;">-->
+                        <!--<li>1</li>-->
+                        <!--<li>2</li>-->
+                        <!--<li>3</li>-->
+                        <!--<li>4</li>-->
+                        <!--<li>5</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="pageDown">下一页</div>-->
+                <!--<div style="padding-top: 2px"><span id="pageId" class="pageButtonInfo" style="margin-top: 0px;list-style:none">第1页/共5页</span></div>-->
+            <!--</div>-->
 
             <p class="text-center" style="margin-top: 5px;margin-bottom: 50px">
                 <button class="page-btn disabled" type="button" style="background: none;border:none;" disabled="disabled" onclick="lastPage()">上一页</button>

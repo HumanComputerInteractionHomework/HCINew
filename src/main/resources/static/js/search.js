@@ -2,6 +2,8 @@
 var pp = 1;
 function fuzzySearchRequest(page) {
 
+    alert("hihio");
+
     var phone = getCookie("phone");
     if(phone =="") {
         alert("请先登录！");
