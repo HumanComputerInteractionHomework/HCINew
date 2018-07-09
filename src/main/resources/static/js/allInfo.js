@@ -72,7 +72,6 @@ function click_basicInfo_2() {
     document.getElementById("show_bonus").readOnly = true;
     document.getElementById("show_Commission").readOnly = true;
     document.getElementById("show_stockShareOption").readOnly = true;
-    alert("修改成功");
 }
 
 function click_education_1() {
@@ -91,7 +90,6 @@ function click_education_2() {
     document.getElementById("show_major").readOnly = true;
     document.getElementById("show_fromTime").readOnly = true;
     document.getElementById("show_toTime").readOnly = true;
-    alert("修改成功");
 }
 
 function click_expect_click1() {
@@ -114,7 +112,6 @@ function click_expect_click2() {
     document.getElementById("show_company_type").readOnly = true;
     document.getElementById("show_expect_position").readOnly = true;
     document.getElementById("show_other_info").readOnly = true;
-    alert("修改成功");
 }
 
 
