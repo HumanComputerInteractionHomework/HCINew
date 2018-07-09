@@ -30,7 +30,7 @@ function signInClicked() {
                 console.log(data)
                 if (data.result == true) {
                     //跳转到主页
-                    alert("登录成功");
+                    // alert("登录成功");
                     setCookie("phone", username, 1);
                     window.location.href = "home.html";
                 } else {
