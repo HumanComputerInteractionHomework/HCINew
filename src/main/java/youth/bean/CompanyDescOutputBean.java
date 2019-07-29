@@ -16,8 +16,10 @@ public class CompanyDescOutputBean {
     private String word;
     private Double weight;
 
-    public CompanyDescOutputBean(){
 
+    // CompanyDescOutputBean
+    public CompanyDescOutputBean(){
+        System.out.println( "jenkins test" );
     }
 
     public CompanyDescOutputBean(String companyName, String word, Double weight) {
